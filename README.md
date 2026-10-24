@@ -73,7 +73,7 @@ No backend, database server, cloud service or account is involved; the reasons a
 
 ## 8. Installation
 ```bash
-git clone https://github.com/arshpreet-svg/vaaniboard.git   # repository exists but is empty until the first push
+git clone https://github.com/payal-priyadarshini-sahoo-pps/vaaniboard.git
 cd vaaniboard
 cd studio && npm ci && cd ..
 pip install platformio==6.2.0        # only for firmware work
@@ -186,5 +186,5 @@ Software (firmware, Studio, tools, tests, CAD scripts): **MIT** ([`LICENSE`](LIC
 [Implementation tracker](implementation.md) · [Implementation audit](docs/IMPLEMENTATION_AUDIT.md) · [Technical design](docs/TECHNICAL_DESIGN.md) · [Serial protocol](docs/SERIAL_PROTOCOL.md) · [Test plan](docs/TEST_PLAN.md) · [Threat model and privacy](docs/THREAT_MODEL_AND_PRIVACY.md) · [Build guide](docs/BUILD_GUIDE.md) · [Demo script](docs/DEMO.md) · [Release checklist](docs/RELEASE_CHECKLIST.md) · [CAD](cad/README.md)
 
 ## 24. Links
-- Repository: https://github.com/arshpreet-svg/vaaniboard (exists and is public; **empty until the first push**)
+- Repository: https://github.com/payal-priyadarshini-sahoo-pps/vaaniboard (team repository https://github.com/arshpreet-svg/vaaniboard is still empty)
 - Demo video: not recorded yet. Storyboard in [`docs/DEMO.md`](docs/DEMO.md)

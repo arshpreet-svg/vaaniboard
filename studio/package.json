@@ -7,7 +7,7 @@
   "scripts": {
     "dev": "next dev",
     "build": "next build",
-    "start": "npx serve@14.2.4 out",
+    "start": "node scripts/serve.mjs",
     "lint": "next lint --max-warnings 0",
     "test": "vitest run",
     "test:watch": "vitest"

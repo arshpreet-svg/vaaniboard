@@ -1,0 +1,22 @@
+{
+  "schema": "vaaniboard.language-pack/1",
+  "code": "mr",
+  "name": "Marathi (incomplete example)",
+  "native_name": "मराठी",
+  "comment": "EXAMPLE of an incomplete pack, used by the tests and for trying Studio's import. Only some keys are filled in and nothing has been reviewed by a native speaker. Missing keys fall back to the English meaning; the board keeps working.",
+  "provenance": {
+    "transliteration": "Example data written for testing; not reviewed.",
+    "label_native": "Example data written for testing; not reviewed."
+  },
+  "keys": [
+    { "id": "k01", "label_native": "हो", "transliteration": "HO", "keywords": [], "audio": "mr/01.wav",
+      "review": { "label_native": "unverified", "transliteration": "unverified" } },
+    { "id": "k02", "label_native": "नाही", "transliteration": "NAHI", "keywords": [], "audio": "mr/02.wav",
+      "review": { "label_native": "unverified", "transliteration": "unverified" } },
+    { "id": "k05", "label_native": "पाणी", "transliteration": "PAANI", "keywords": ["paani"], "audio": "mr/05.wav",
+      "review": { "label_native": "unverified", "transliteration": "unverified" } }
+  ],
+  "prompts": [
+    { "text": "Paani pahije?", "keywords": ["paani"] }
+  ]
+}

@@ -1,0 +1,11 @@
+{
+  "schema": "vaaniboard.profiles/1",
+  "exported_at": "2026-10-25T09:00:00.000Z",
+  "comment": "FICTIONAL sample profiles for Studio's Profiles > Import and for the tests. Child codes are made up. The last entry is invalid on purpose (volume above the 80% cap) and must be skipped on import.",
+  "profiles": [
+    { "child": "S01", "lang": "hi", "mode": "direct", "hold_ms": 0, "lockout_ms": 1500, "scan_ms": 1500, "volume": 60, "listening": true },
+    { "child": "S02", "lang": "ta", "mode": "scan", "hold_ms": 300, "lockout_ms": 2000, "scan_ms": 2000, "volume": 50, "listening": true },
+    { "child": "S03", "lang": "bn", "mode": "direct", "hold_ms": 500, "lockout_ms": 2500, "scan_ms": 1500, "volume": 70, "listening": false },
+    { "child": "S04", "lang": "hi", "mode": "direct", "hold_ms": 0, "lockout_ms": 1500, "scan_ms": 1500, "volume": 95, "listening": true }
+  ]
+}

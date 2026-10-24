@@ -1,0 +1,20 @@
+{
+  "schema": "vaaniboard.events/1",
+  "synthetic": true,
+  "comment": "FICTIONAL demo session for Studio's History tab and tests. Child codes are made up; no real child or classroom produced these events. Fields follow the board's EVT line (docs/SERIAL_PROTOCOL.md).",
+  "events": [
+    { "ms": 61200, "child": "D01", "event": "select", "key": 1, "word": "yes", "lang": "hi", "input": "press" },
+    { "ms": 95400, "child": "D01", "event": "highlight", "key": 6, "word": "food", "lang": "hi", "input": "listen" },
+    { "ms": 95650, "child": "D01", "event": "highlight", "key": 5, "word": "water", "lang": "hi", "input": "listen" },
+    { "ms": 99100, "child": "D01", "event": "select", "key": 5, "word": "water", "lang": "hi", "input": "press" },
+    { "ms": 142000, "child": "D01", "event": "palm", "key": 0, "word": "-", "lang": "hi", "input": "press" },
+    { "ms": 180300, "child": "D01", "event": "select", "key": 3, "word": "help", "lang": "hi", "input": "press" },
+    { "ms": 240800, "child": "D01", "event": "select", "key": 2, "word": "no", "lang": "hi", "input": "press" },
+    { "ms": 300000, "child": "D02", "event": "caregiver_on", "key": 0, "word": "-", "lang": "ta", "input": "reed" },
+    { "ms": 312000, "child": "D02", "event": "caregiver_off", "key": 0, "word": "-", "lang": "ta", "input": "reed" },
+    { "ms": 350500, "child": "D02", "event": "select", "key": 1, "word": "yes", "lang": "ta", "input": "switch" },
+    { "ms": 371200, "child": "D02", "event": "select", "key": 8, "word": "pain", "lang": "ta", "input": "switch" },
+    { "ms": 402900, "child": "D02", "event": "select", "key": 4, "word": "stop", "lang": "ta", "input": "switch" },
+    { "ms": 455000, "child": "D02", "event": "select", "key": 6, "word": "food", "lang": "ta", "input": "switch" }
+  ]
+}

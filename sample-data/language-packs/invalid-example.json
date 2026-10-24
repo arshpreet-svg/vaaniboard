@@ -1,0 +1,11 @@
+{
+  "schema": "vaaniboard.language-pack/1",
+  "code": "Hindi",
+  "name": "Deliberately invalid pack",
+  "comment": "INVALID on purpose, to show what Studio's import and `node tools/vocab.mjs validate` report: bad language code, keywords on a core key, non-ASCII transliteration, duplicate key.",
+  "keys": [
+    { "id": "k01", "label_native": "हाँ", "transliteration": "हाँ", "keywords": ["haan"] },
+    { "id": "k01", "transliteration": "HAAN" },
+    { "id": "k42", "transliteration": "EXTRA" }
+  ]
+}

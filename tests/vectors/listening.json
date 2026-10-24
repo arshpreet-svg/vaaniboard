@@ -1,0 +1,73 @@
+{
+  "comment": "Listening-assistance rule, shared by the firmware host tests and the Studio simulator tests. Steps run in order. A step with `kw` sends a keyword result and checks `expect` (off | speaking | nokey | below | waiting | highlight). Every step may check `lit` (1-based keys highlighted after the step). `clear: true` clears highlights. Time `t` is milliseconds.",
+  "cases": [
+    { "name": "one confident result lights nothing", "keys": 8, "listening": true, "steps": [
+      { "t": 0, "kw": "paani", "conf": 0.92, "expect": "waiting", "lit": [] } ] },
+    { "name": "two confident results in a row light the key", "keys": 8, "listening": true, "steps": [
+      { "t": 0, "kw": "paani", "conf": 0.92, "expect": "waiting" },
+      { "t": 250, "kw": "paani", "conf": 0.92, "expect": "highlight", "lit": [5] } ] },
+    { "name": "highlight fades after exactly 10 s", "keys": 8, "listening": true, "steps": [
+      { "t": 0, "kw": "khana", "conf": 0.9, "expect": "waiting" },
+      { "t": 100, "kw": "khana", "conf": 0.9, "expect": "highlight", "lit": [6] },
+      { "t": 10099, "lit": [6] },
+      { "t": 10100, "lit": [] } ] },
+    { "name": "0.8 is confident, 0.79 is not", "keys": 8, "listening": true, "steps": [
+      { "t": 0, "kw": "dard", "conf": 0.79, "expect": "below" },
+      { "t": 100, "kw": "dard", "conf": 0.8, "expect": "waiting" },
+      { "t": 200, "kw": "dard", "conf": 0.8, "expect": "highlight", "lit": [8] } ] },
+    { "name": "unclear speech never lights", "keys": 8, "listening": true, "steps": [
+      { "t": 0, "kw": "paani", "conf": 0.55, "expect": "below" },
+      { "t": 250, "kw": "paani", "conf": 0.55, "expect": "below", "lit": [] } ] },
+    { "name": "a low result breaks the pair", "keys": 8, "listening": true, "steps": [
+      { "t": 0, "kw": "paani", "conf": 0.9, "expect": "waiting" },
+      { "t": 100, "kw": "paani", "conf": 0.3, "expect": "below" },
+      { "t": 200, "kw": "paani", "conf": 0.9, "expect": "waiting", "lit": [] } ] },
+    { "name": "results more than 1.5 s apart do not pair", "keys": 8, "listening": true, "steps": [
+      { "t": 0, "kw": "paani", "conf": 0.9, "expect": "waiting" },
+      { "t": 1501, "kw": "paani", "conf": 0.9, "expect": "waiting", "lit": [] },
+      { "t": 3000, "kw": "paani", "conf": 0.9, "expect": "highlight", "lit": [5] } ] },
+    { "name": "alternating words never pair", "keys": 8, "listening": true, "steps": [
+      { "t": 0, "kw": "khana", "conf": 0.95, "expect": "waiting" },
+      { "t": 100, "kw": "paani", "conf": 0.95, "expect": "waiting" },
+      { "t": 200, "kw": "khana", "conf": 0.95, "expect": "waiting", "lit": [] } ] },
+    { "name": "each highlight needs a fresh pair", "keys": 8, "listening": true, "steps": [
+      { "t": 0, "kw": "paani", "conf": 0.9, "expect": "waiting" },
+      { "t": 100, "kw": "paani", "conf": 0.9, "expect": "highlight" },
+      { "t": 200, "kw": "paani", "conf": 0.9, "expect": "waiting" },
+      { "t": 300, "kw": "paani", "conf": 0.9, "expect": "highlight", "lit": [5] } ] },
+    { "name": "two different keys can be lit together", "keys": 8, "listening": true, "steps": [
+      { "t": 0, "kw": "khana", "conf": 0.92, "expect": "waiting" },
+      { "t": 250, "kw": "khana", "conf": 0.92, "expect": "highlight" },
+      { "t": 500, "kw": "paani", "conf": 0.92, "expect": "waiting" },
+      { "t": 750, "kw": "paani", "conf": 0.92, "expect": "highlight", "lit": [5, 6] },
+      { "t": 10250, "lit": [5] },
+      { "t": 10750, "lit": [] } ] },
+    { "name": "clear removes highlights", "keys": 8, "listening": true, "steps": [
+      { "t": 0, "kw": "paani", "conf": 0.9, "expect": "waiting" },
+      { "t": 100, "kw": "paani", "conf": 0.9, "expect": "highlight" },
+      { "t": 200, "clear": true, "lit": [] } ] },
+    { "name": "listening off ignores everything", "keys": 8, "listening": false, "steps": [
+      { "t": 0, "kw": "paani", "conf": 0.99, "expect": "off" },
+      { "t": 100, "kw": "paani", "conf": 0.99, "expect": "off", "lit": [] } ] },
+    { "name": "results while the board speaks do not count", "keys": 8, "listening": true, "steps": [
+      { "t": 0, "kw": "paani", "conf": 0.9, "speaking": true, "expect": "speaking" },
+      { "t": 100, "kw": "paani", "conf": 0.9, "expect": "waiting", "lit": [] },
+      { "t": 200, "kw": "paani", "conf": 0.9, "expect": "highlight", "lit": [5] } ] },
+    { "name": "4-key board has no vocabulary keys to light", "keys": 4, "listening": true, "steps": [
+      { "t": 0, "kw": "paani", "conf": 0.9, "expect": "nokey" },
+      { "t": 100, "kw": "paani", "conf": 0.9, "expect": "nokey", "lit": [] } ] },
+    { "name": "core-row words are never keywords", "keys": 8, "listening": true, "steps": [
+      { "t": 0, "kw": "haan", "conf": 0.99, "expect": "nokey" },
+      { "t": 100, "kw": "haan", "conf": 0.99, "expect": "nokey" },
+      { "t": 200, "kw": "madad", "conf": 0.99, "expect": "nokey" },
+      { "t": 300, "kw": "madad", "conf": 0.99, "expect": "nokey", "lit": [] } ] },
+    { "name": "keywords are case-insensitive", "keys": 8, "listening": true, "steps": [
+      { "t": 0, "kw": "PAANI", "conf": 0.9, "expect": "waiting" },
+      { "t": 100, "kw": "paani", "conf": 0.9, "expect": "highlight", "lit": [5] } ] },
+    { "name": "Tamil and Bengali keywords map to the same keys", "keys": 8, "listening": true, "steps": [
+      { "t": 0, "kw": "thanneer", "conf": 0.9, "expect": "waiting" },
+      { "t": 100, "kw": "thanneer", "conf": 0.9, "expect": "highlight", "lit": [5] },
+      { "t": 200, "kw": "byatha", "conf": 0.9, "expect": "waiting" },
+      { "t": 300, "kw": "byatha", "conf": 0.9, "expect": "highlight", "lit": [5, 8] } ] }
+  ]
+}

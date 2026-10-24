@@ -1,0 +1,15 @@
+{
+  "schema": "vaaniboard.keyset/1",
+  "comment": "Stable key slots shared by every language. Slot numbers are the physical key and the clip file name (01.wav). Never renumber a slot; add new ones at the end. Keys 1-4 are the core row and must stay core.",
+  "languages": ["hi", "ta", "bn"],
+  "keys": [
+    { "id": "k01", "slot": 1, "meaning": "yes", "core": true, "urgent": false },
+    { "id": "k02", "slot": 2, "meaning": "no", "core": true, "urgent": false },
+    { "id": "k03", "slot": 3, "meaning": "help", "core": true, "urgent": true },
+    { "id": "k04", "slot": 4, "meaning": "stop", "core": true, "urgent": true },
+    { "id": "k05", "slot": 5, "meaning": "water", "core": false, "urgent": false },
+    { "id": "k06", "slot": 6, "meaning": "food", "core": false, "urgent": false },
+    { "id": "k07", "slot": 7, "meaning": "toilet", "core": false, "urgent": true },
+    { "id": "k08", "slot": 8, "meaning": "pain", "core": false, "urgent": true }
+  ]
+}

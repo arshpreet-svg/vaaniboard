@@ -9,3 +9,5 @@ void audioBegin();
 void audioSay(const char* path, uint8_t fallbackBeeps);
 bool audioBusy();
 bool audioFsMounted();
+bool audioClipExists(const char* path);
+uint32_t audioLastEndMs();  // millis() when the last clip or beep finished

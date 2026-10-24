@@ -17,6 +17,7 @@ constexpr uint32_t MAX_CLIP_SECONDS = 3;  // keeps a clip in RAM and under the t
 QueueHandle_t jobs;
 volatile bool busy = false;
 volatile bool abortClip = false;
+volatile uint32_t lastEnd = 0;
 bool fsMounted = false;
 
 uint32_t le32(const uint8_t* b) { return b[0] | b[1] << 8 | b[2] << 16 | (uint32_t)b[3] << 24; }
@@ -123,6 +124,7 @@ void audioTask(void*) {
         vTaskDelay(pdMS_TO_TICKS(90));
       }
     }
+    lastEnd = millis();
     busy = false;
   }
 }
@@ -149,3 +151,7 @@ void audioSay(const char* path, uint8_t fallbackBeeps) {
 bool audioBusy() { return busy; }
 
 bool audioFsMounted() { return fsMounted; }
+
+bool audioClipExists(const char* path) { return fsMounted && LittleFS.exists(path); }
+
+uint32_t audioLastEndMs() { return lastEnd; }

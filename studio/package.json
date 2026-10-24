@@ -2,6 +2,7 @@
   "name": "vaaniboard-studio",
   "version": "0.1.0",
   "private": true,
+  "type": "module",
   "description": "Offline caregiver app for VaaniBoard: profiles, prompt simulation, voice recording and event log over USB (Web Serial).",
   "scripts": {
     "dev": "next dev",

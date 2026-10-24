@@ -1,0 +1,468 @@
+{
+  "generated": "tools/vocab.mjs",
+  "keyset": {
+    "schema": "vaaniboard.keyset/1",
+    "comment": "Stable key slots shared by every language. Slot numbers are the physical key and the clip file name (01.wav). Never renumber a slot; add new ones at the end. Keys 1-4 are the core row and must stay core.",
+    "languages": [
+      "hi",
+      "ta",
+      "bn"
+    ],
+    "keys": [
+      {
+        "id": "k01",
+        "slot": 1,
+        "meaning": "yes",
+        "core": true,
+        "urgent": false
+      },
+      {
+        "id": "k02",
+        "slot": 2,
+        "meaning": "no",
+        "core": true,
+        "urgent": false
+      },
+      {
+        "id": "k03",
+        "slot": 3,
+        "meaning": "help",
+        "core": true,
+        "urgent": true
+      },
+      {
+        "id": "k04",
+        "slot": 4,
+        "meaning": "stop",
+        "core": true,
+        "urgent": true
+      },
+      {
+        "id": "k05",
+        "slot": 5,
+        "meaning": "water",
+        "core": false,
+        "urgent": false
+      },
+      {
+        "id": "k06",
+        "slot": 6,
+        "meaning": "food",
+        "core": false,
+        "urgent": false
+      },
+      {
+        "id": "k07",
+        "slot": 7,
+        "meaning": "toilet",
+        "core": false,
+        "urgent": true
+      },
+      {
+        "id": "k08",
+        "slot": 8,
+        "meaning": "pain",
+        "core": false,
+        "urgent": true
+      }
+    ]
+  },
+  "packs": [
+    {
+      "schema": "vaaniboard.language-pack/1",
+      "code": "hi",
+      "name": "Hindi",
+      "native_name": "हिन्दी",
+      "provenance": {
+        "transliteration": "Team-authored for the Stage 2 firmware (firmware/board/src/vocab.h, October 2026).",
+        "label_native": "Added October 2026. Not yet reviewed by a native speaker.",
+        "keywords": "Team-authored listening keywords from the Stage 2 firmware."
+      },
+      "keys": [
+        {
+          "id": "k01",
+          "label_native": "हाँ",
+          "transliteration": "HAAN",
+          "keywords": [],
+          "audio": "hi/01.wav",
+          "review": {
+            "label_native": "unverified",
+            "transliteration": "team-authored"
+          }
+        },
+        {
+          "id": "k02",
+          "label_native": "नहीं",
+          "transliteration": "NAHI",
+          "keywords": [],
+          "audio": "hi/02.wav",
+          "review": {
+            "label_native": "unverified",
+            "transliteration": "team-authored"
+          }
+        },
+        {
+          "id": "k03",
+          "label_native": "मदद",
+          "transliteration": "MADAD",
+          "keywords": [],
+          "audio": "hi/03.wav",
+          "review": {
+            "label_native": "unverified",
+            "transliteration": "team-authored"
+          }
+        },
+        {
+          "id": "k04",
+          "label_native": "रुको",
+          "transliteration": "RUKO",
+          "keywords": [],
+          "audio": "hi/04.wav",
+          "review": {
+            "label_native": "unverified",
+            "transliteration": "team-authored"
+          }
+        },
+        {
+          "id": "k05",
+          "label_native": "पानी",
+          "transliteration": "PAANI",
+          "keywords": [
+            "paani"
+          ],
+          "audio": "hi/05.wav",
+          "review": {
+            "label_native": "unverified",
+            "transliteration": "team-authored"
+          }
+        },
+        {
+          "id": "k06",
+          "label_native": "खाना",
+          "transliteration": "KHANA",
+          "keywords": [
+            "khana"
+          ],
+          "audio": "hi/06.wav",
+          "review": {
+            "label_native": "unverified",
+            "transliteration": "team-authored"
+          }
+        },
+        {
+          "id": "k07",
+          "label_native": "टॉयलेट",
+          "transliteration": "TOILET",
+          "keywords": [
+            "toilet"
+          ],
+          "audio": "hi/07.wav",
+          "review": {
+            "label_native": "unverified",
+            "transliteration": "team-authored"
+          }
+        },
+        {
+          "id": "k08",
+          "label_native": "दर्द",
+          "transliteration": "DARD",
+          "keywords": [
+            "dard"
+          ],
+          "audio": "hi/08.wav",
+          "review": {
+            "label_native": "unverified",
+            "transliteration": "team-authored"
+          }
+        }
+      ],
+      "prompts": [
+        {
+          "text": "Khana ya paani?",
+          "keywords": [
+            "khana",
+            "paani"
+          ]
+        },
+        {
+          "text": "Paani chahiye?",
+          "keywords": [
+            "paani"
+          ]
+        },
+        {
+          "text": "Toilet jaana hai?",
+          "keywords": [
+            "toilet"
+          ]
+        },
+        {
+          "text": "Dard ho raha hai?",
+          "keywords": [
+            "dard"
+          ]
+        }
+      ]
+    },
+    {
+      "schema": "vaaniboard.language-pack/1",
+      "code": "ta",
+      "name": "Tamil",
+      "native_name": "தமிழ்",
+      "provenance": {
+        "transliteration": "Team-authored for the Stage 2 firmware (firmware/board/src/vocab.h, October 2026).",
+        "label_native": "Added October 2026. Not yet reviewed by a native speaker.",
+        "keywords": "Team-authored listening keywords from the Stage 2 firmware."
+      },
+      "keys": [
+        {
+          "id": "k01",
+          "label_native": "ஆமாம்",
+          "transliteration": "AAMAM",
+          "keywords": [],
+          "audio": "ta/01.wav",
+          "review": {
+            "label_native": "unverified",
+            "transliteration": "team-authored"
+          }
+        },
+        {
+          "id": "k02",
+          "label_native": "இல்லை",
+          "transliteration": "ILLAI",
+          "keywords": [],
+          "audio": "ta/02.wav",
+          "review": {
+            "label_native": "unverified",
+            "transliteration": "team-authored"
+          }
+        },
+        {
+          "id": "k03",
+          "label_native": "உதவி",
+          "transliteration": "UDHAVI",
+          "keywords": [],
+          "audio": "ta/03.wav",
+          "review": {
+            "label_native": "unverified",
+            "transliteration": "team-authored"
+          }
+        },
+        {
+          "id": "k04",
+          "label_native": "நில்லு",
+          "transliteration": "NILLU",
+          "keywords": [],
+          "audio": "ta/04.wav",
+          "review": {
+            "label_native": "unverified",
+            "transliteration": "team-authored"
+          }
+        },
+        {
+          "id": "k05",
+          "label_native": "தண்ணீர்",
+          "transliteration": "THANNEER",
+          "keywords": [
+            "thanneer"
+          ],
+          "audio": "ta/05.wav",
+          "review": {
+            "label_native": "unverified",
+            "transliteration": "team-authored"
+          }
+        },
+        {
+          "id": "k06",
+          "label_native": "சாப்பாடு",
+          "transliteration": "SAAPADU",
+          "keywords": [
+            "saapadu"
+          ],
+          "audio": "ta/06.wav",
+          "review": {
+            "label_native": "unverified",
+            "transliteration": "team-authored"
+          }
+        },
+        {
+          "id": "k07",
+          "label_native": "டாய்லெட்",
+          "transliteration": "TOILET",
+          "keywords": [
+            "toilet"
+          ],
+          "audio": "ta/07.wav",
+          "review": {
+            "label_native": "unverified",
+            "transliteration": "team-authored"
+          }
+        },
+        {
+          "id": "k08",
+          "label_native": "வலி",
+          "transliteration": "VALI",
+          "keywords": [
+            "vali"
+          ],
+          "audio": "ta/08.wav",
+          "review": {
+            "label_native": "unverified",
+            "transliteration": "team-authored"
+          }
+        }
+      ],
+      "prompts": [
+        {
+          "text": "Saapadu venuma, thanneer venuma?",
+          "keywords": [
+            "saapadu",
+            "thanneer"
+          ]
+        },
+        {
+          "text": "Toilet poganuma?",
+          "keywords": [
+            "toilet"
+          ]
+        },
+        {
+          "text": "Vali irukka?",
+          "keywords": [
+            "vali"
+          ]
+        }
+      ]
+    },
+    {
+      "schema": "vaaniboard.language-pack/1",
+      "code": "bn",
+      "name": "Bengali",
+      "native_name": "বাংলা",
+      "provenance": {
+        "transliteration": "Team-authored for the Stage 2 firmware (firmware/board/src/vocab.h, October 2026).",
+        "label_native": "Added October 2026. Not yet reviewed by a native speaker.",
+        "keywords": "Team-authored listening keywords from the Stage 2 firmware."
+      },
+      "keys": [
+        {
+          "id": "k01",
+          "label_native": "হ্যাঁ",
+          "transliteration": "HYAN",
+          "keywords": [],
+          "audio": "bn/01.wav",
+          "review": {
+            "label_native": "unverified",
+            "transliteration": "team-authored"
+          }
+        },
+        {
+          "id": "k02",
+          "label_native": "না",
+          "transliteration": "NA",
+          "keywords": [],
+          "audio": "bn/02.wav",
+          "review": {
+            "label_native": "unverified",
+            "transliteration": "team-authored"
+          }
+        },
+        {
+          "id": "k03",
+          "label_native": "সাহায্য",
+          "transliteration": "SAHAJYO",
+          "keywords": [],
+          "audio": "bn/03.wav",
+          "review": {
+            "label_native": "unverified",
+            "transliteration": "team-authored"
+          }
+        },
+        {
+          "id": "k04",
+          "label_native": "থামো",
+          "transliteration": "THAMO",
+          "keywords": [],
+          "audio": "bn/04.wav",
+          "review": {
+            "label_native": "unverified",
+            "transliteration": "team-authored"
+          }
+        },
+        {
+          "id": "k05",
+          "label_native": "জল",
+          "transliteration": "JOL",
+          "keywords": [
+            "jol"
+          ],
+          "audio": "bn/05.wav",
+          "review": {
+            "label_native": "unverified",
+            "transliteration": "team-authored"
+          }
+        },
+        {
+          "id": "k06",
+          "label_native": "খাবার",
+          "transliteration": "KHABAR",
+          "keywords": [
+            "khabar"
+          ],
+          "audio": "bn/06.wav",
+          "review": {
+            "label_native": "unverified",
+            "transliteration": "team-authored"
+          }
+        },
+        {
+          "id": "k07",
+          "label_native": "টয়লেট",
+          "transliteration": "TOILET",
+          "keywords": [
+            "toilet"
+          ],
+          "audio": "bn/07.wav",
+          "review": {
+            "label_native": "unverified",
+            "transliteration": "team-authored"
+          }
+        },
+        {
+          "id": "k08",
+          "label_native": "ব্যথা",
+          "transliteration": "BYATHA",
+          "keywords": [
+            "byatha"
+          ],
+          "audio": "bn/08.wav",
+          "review": {
+            "label_native": "unverified",
+            "transliteration": "team-authored"
+          }
+        }
+      ],
+      "prompts": [
+        {
+          "text": "Khabar na jol?",
+          "keywords": [
+            "khabar",
+            "jol"
+          ]
+        },
+        {
+          "text": "Toilet jabe?",
+          "keywords": [
+            "toilet"
+          ]
+        },
+        {
+          "text": "Byatha korche?",
+          "keywords": [
+            "byatha"
+          ]
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,34 @@
+{
+  "schema": "vaaniboard.language-pack/1",
+  "code": "bn",
+  "name": "Bengali",
+  "native_name": "বাংলা",
+  "provenance": {
+    "transliteration": "Team-authored for the Stage 2 firmware (firmware/board/src/vocab.h, October 2026).",
+    "label_native": "Added October 2026. Not yet reviewed by a native speaker.",
+    "keywords": "Team-authored listening keywords from the Stage 2 firmware."
+  },
+  "keys": [
+    { "id": "k01", "label_native": "হ্যাঁ", "transliteration": "HYAN", "keywords": [], "audio": "bn/01.wav",
+      "review": { "label_native": "unverified", "transliteration": "team-authored" } },
+    { "id": "k02", "label_native": "না", "transliteration": "NA", "keywords": [], "audio": "bn/02.wav",
+      "review": { "label_native": "unverified", "transliteration": "team-authored" } },
+    { "id": "k03", "label_native": "সাহায্য", "transliteration": "SAHAJYO", "keywords": [], "audio": "bn/03.wav",
+      "review": { "label_native": "unverified", "transliteration": "team-authored" } },
+    { "id": "k04", "label_native": "থামো", "transliteration": "THAMO", "keywords": [], "audio": "bn/04.wav",
+      "review": { "label_native": "unverified", "transliteration": "team-authored" } },
+    { "id": "k05", "label_native": "জল", "transliteration": "JOL", "keywords": ["jol"], "audio": "bn/05.wav",
+      "review": { "label_native": "unverified", "transliteration": "team-authored" } },
+    { "id": "k06", "label_native": "খাবার", "transliteration": "KHABAR", "keywords": ["khabar"], "audio": "bn/06.wav",
+      "review": { "label_native": "unverified", "transliteration": "team-authored" } },
+    { "id": "k07", "label_native": "টয়লেট", "transliteration": "TOILET", "keywords": ["toilet"], "audio": "bn/07.wav",
+      "review": { "label_native": "unverified", "transliteration": "team-authored" } },
+    { "id": "k08", "label_native": "ব্যথা", "transliteration": "BYATHA", "keywords": ["byatha"], "audio": "bn/08.wav",
+      "review": { "label_native": "unverified", "transliteration": "team-authored" } }
+  ],
+  "prompts": [
+    { "text": "Khabar na jol?", "keywords": ["khabar", "jol"] },
+    { "text": "Toilet jabe?", "keywords": ["toilet"] },
+    { "text": "Byatha korche?", "keywords": ["byatha"] }
+  ]
+}

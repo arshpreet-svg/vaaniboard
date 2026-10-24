@@ -1,0 +1,16 @@
+{
+  "name": "vaaniboard-studio",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Offline caregiver app for VaaniBoard: profiles, prompt simulation, voice recording and event log over USB (Web Serial).",
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "npx serve@14.2.4 out"
+  },
+  "dependencies": {
+    "next": "14.2.35",
+    "react": "18.3.1",
+    "react-dom": "18.3.1"
+  }
+}

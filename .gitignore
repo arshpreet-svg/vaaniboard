@@ -1,0 +1,10 @@
+# PlatformIO
+firmware/board/.pio/
+firmware/board/.vscode/
+# Studio
+studio/node_modules/
+studio/.next/
+studio/out/
+# OS
+.DS_Store
+Thumbs.db

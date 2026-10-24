@@ -1,0 +1,708 @@
+{
+ "parts": [
+  {
+   "name": "housing_top",
+   "material": "petg_teal",
+   "color": [
+    0.06,
+    0.45,
+    0.48,
+    1
+   ],
+   "explode": [
+    0,
+    0,
+    0
+   ]
+  },
+  {
+   "name": "base_plate",
+   "material": "petg_white",
+   "color": [
+    0.8,
+    0.82,
+    0.85,
+    1
+   ],
+   "explode": [
+    0,
+    0,
+    -95
+   ]
+  },
+  {
+   "name": "battery_door",
+   "material": "petg_white",
+   "color": [
+    0.8,
+    0.82,
+    0.85,
+    1
+   ],
+   "explode": [
+    0,
+    0,
+    -190
+   ]
+  },
+  {
+   "name": "rubber_feet",
+   "material": "rubber",
+   "color": [
+    0.1,
+    0.1,
+    0.1,
+    1
+   ],
+   "explode": [
+    0,
+    0,
+    -205
+   ]
+  },
+  {
+   "name": "lipo_3000mAh",
+   "material": "lipo",
+   "color": [
+    0.55,
+    0.62,
+    0.72,
+    1
+   ],
+   "explode": [
+    0,
+    0,
+    -150
+   ]
+  },
+  {
+   "name": "perfboard_and_modules",
+   "material": "pcb",
+   "color": [
+    0.05,
+    0.35,
+    0.18,
+    1
+   ],
+   "explode": [
+    0,
+    0,
+    -95
+   ]
+  },
+  {
+   "name": "esp32s3_parts",
+   "material": "metal",
+   "color": [
+    0.7,
+    0.7,
+    0.72,
+    1
+   ],
+   "explode": [
+    0,
+    0,
+    -95
+   ]
+  },
+  {
+   "name": "tp4056_usbc",
+   "material": "pcb",
+   "color": [
+    0.05,
+    0.35,
+    0.18,
+    1
+   ],
+   "explode": [
+    0,
+    0,
+    -95
+   ]
+  },
+  {
+   "name": "mode_switch",
+   "material": "black",
+   "color": [
+    0.08,
+    0.08,
+    0.09,
+    1
+   ],
+   "explode": [
+    0,
+    0,
+    -95
+   ]
+  },
+  {
+   "name": "speaker_40mm",
+   "material": "metal",
+   "color": [
+    0.7,
+    0.7,
+    0.72,
+    1
+   ],
+   "explode": [
+    -0.0,
+    4.862148974674049,
+    -27.574617084341824
+   ]
+  },
+  {
+   "name": "inmp441_mic",
+   "material": "pcb",
+   "color": [
+    0.05,
+    0.35,
+    0.18,
+    1
+   ],
+   "explode": [
+    -0.0,
+    3.125667198004746,
+    -17.726539554219745
+   ]
+  },
+  {
+   "name": "ws2812b_leds",
+   "material": "led",
+   "color": [
+    1.0,
+    1.0,
+    0.95,
+    1
+   ],
+   "explode": [
+    -0.0,
+    2.4310744873370247,
+    -13.787308542170912
+   ]
+  },
+  {
+   "name": "status_lightpipe",
+   "material": "clear",
+   "color": [
+    0.85,
+    0.95,
+    1.0,
+    0.3
+   ],
+   "explode": [
+    0.0,
+    -2.4310744873370247,
+    13.787308542170912
+   ]
+  },
+  {
+   "name": "jacks_3p5mm",
+   "material": "metal",
+   "color": [
+    0.7,
+    0.7,
+    0.72,
+    1
+   ],
+   "explode": [
+    0,
+    40,
+    0
+   ]
+  },
+  {
+   "name": "power_rocker",
+   "material": "black",
+   "color": [
+    0.08,
+    0.08,
+    0.09,
+    1
+   ],
+   "explode": [
+    0,
+    40,
+    0
+   ]
+  },
+  {
+   "name": "bezels_lightring",
+   "material": "translucent",
+   "color": [
+    0.97,
+    0.97,
+    0.94,
+    0.6
+   ],
+   "explode": [
+    0.0,
+    -3.820259908672467,
+    21.665770566268577
+   ]
+  },
+  {
+   "name": "arcade_buttons",
+   "material": "black",
+   "color": [
+    0.08,
+    0.08,
+    0.09,
+    1
+   ],
+   "explode": [
+    0.0,
+    -8.335112528012656,
+    47.27077214458598
+   ]
+  },
+  {
+   "name": "keycaps_people",
+   "material": "cap_0",
+   "color": [
+    0.98,
+    0.8,
+    0.18,
+    1
+   ],
+   "explode": [
+    0.0,
+    -13.544557858020566,
+    76.81500473495223
+   ]
+  },
+  {
+   "name": "keycaps_actions",
+   "material": "cap_1",
+   "color": [
+    0.3,
+    0.72,
+    0.38,
+    1
+   ],
+   "explode": [
+    0.0,
+    -13.544557858020566,
+    76.81500473495223
+   ]
+  },
+  {
+   "name": "keycaps_things",
+   "material": "cap_2",
+   "color": [
+    0.96,
+    0.55,
+    0.2,
+    1
+   ],
+   "explode": [
+    0.0,
+    -13.544557858020566,
+    76.81500473495223
+   ]
+  },
+  {
+   "name": "keycaps_urgent",
+   "material": "cap_3",
+   "color": [
+    0.9,
+    0.33,
+    0.52,
+    1
+   ],
+   "explode": [
+    0.0,
+    -13.544557858020566,
+    76.81500473495223
+   ]
+  },
+  {
+   "name": "pictures_people",
+   "material": "pic_0",
+   "color": [
+    0.9910000000000001,
+    0.9100000000000001,
+    0.631,
+    1
+   ],
+   "explode": [
+    0.0,
+    -16.670225056025313,
+    94.54154428917197
+   ]
+  },
+  {
+   "name": "pictures_actions",
+   "material": "pic_1",
+   "color": [
+    0.685,
+    0.8740000000000001,
+    0.7210000000000001,
+    1
+   ],
+   "explode": [
+    0.0,
+    -16.670225056025313,
+    94.54154428917197
+   ]
+  },
+  {
+   "name": "pictures_things",
+   "material": "pic_2",
+   "color": [
+    0.982,
+    0.7975000000000001,
+    0.64,
+    1
+   ],
+   "explode": [
+    0.0,
+    -16.670225056025313,
+    94.54154428917197
+   ]
+  },
+  {
+   "name": "pictures_urgent",
+   "material": "pic_3",
+   "color": [
+    0.9550000000000001,
+    0.6985000000000001,
+    0.784,
+    1
+   ],
+   "explode": [
+    0.0,
+    -16.670225056025313,
+    94.54154428917197
+   ]
+  },
+  {
+   "name": "lenses",
+   "material": "clear",
+   "color": [
+    0.85,
+    0.95,
+    1.0,
+    0.3
+   ],
+   "explode": [
+    0.0,
+    -18.754003188028477,
+    106.35923732531846
+   ]
+  },
+  {
+   "name": "keyguard_acrylic",
+   "material": "acrylic",
+   "color": [
+    0.85,
+    0.95,
+    1.0,
+    0.25
+   ],
+   "explode": [
+    0.0,
+    -22.921559452034803,
+    129.99462339761146
+   ]
+  },
+  {
+   "name": "thumb_screws",
+   "material": "metal",
+   "color": [
+    0.7,
+    0.7,
+    0.72,
+    1
+   ],
+   "explode": [
+    0.0,
+    -26.39452300537341,
+    149.69077845785563
+   ]
+  },
+  {
+   "name": "access_switch_base",
+   "material": "petg_teal",
+   "color": [
+    0.06,
+    0.45,
+    0.48,
+    1
+   ],
+   "explode": [
+    0,
+    0,
+    0
+   ]
+  },
+  {
+   "name": "access_switch_floor",
+   "material": "petg_white",
+   "color": [
+    0.8,
+    0.82,
+    0.85,
+    1
+   ],
+   "explode": [
+    0,
+    0,
+    -30
+   ]
+  },
+  {
+   "name": "access_switch_button",
+   "material": "black",
+   "color": [
+    0.08,
+    0.08,
+    0.09,
+    1
+   ],
+   "explode": [
+    0,
+    0,
+    25
+   ]
+  },
+  {
+   "name": "access_switch_paddle",
+   "material": "cap_3",
+   "color": [
+    0.9,
+    0.33,
+    0.52,
+    1
+   ],
+   "explode": [
+    0,
+    0,
+    55
+   ]
+  },
+  {
+   "name": "badge_case",
+   "material": "petg_teal",
+   "color": [
+    0.06,
+    0.45,
+    0.48,
+    1
+   ],
+   "explode": [
+    0,
+    0,
+    0
+   ]
+  },
+  {
+   "name": "badge_oled",
+   "material": "screen",
+   "color": [
+    0.02,
+    0.05,
+    0.1,
+    1
+   ],
+   "explode": [
+    0,
+    0,
+    18
+   ]
+  },
+  {
+   "name": "badge_button",
+   "material": "cap_1",
+   "color": [
+    0.3,
+    0.72,
+    0.38,
+    1
+   ],
+   "explode": [
+    0,
+    0,
+    26
+   ]
+  },
+  {
+   "name": "badge_strap",
+   "material": "rubber",
+   "color": [
+    0.1,
+    0.1,
+    0.1,
+    1
+   ],
+   "explode": [
+    0,
+    0,
+    -18
+   ]
+  }
+ ],
+ "keys": [
+  {
+   "word": "main",
+   "class": "people",
+   "pos": [
+    -75.0,
+    29.211884380820184,
+    58.199075336406615
+   ]
+  },
+  {
+   "word": "aap",
+   "class": "people",
+   "pos": [
+    -75.0,
+    78.45227203143058,
+    66.88148421975313
+   ]
+  },
+  {
+   "word": "mummy",
+   "class": "people",
+   "pos": [
+    -75.0,
+    127.69265968204097,
+    75.56389310309964
+   ]
+  },
+  {
+   "word": "teacher",
+   "class": "people",
+   "pos": [
+    -75.0,
+    176.9330473326514,
+    84.24630198644617
+   ]
+  },
+  {
+   "word": "chahiye",
+   "class": "actions",
+   "pos": [
+    -25.0,
+    29.211884380820184,
+    58.199075336406615
+   ]
+  },
+  {
+   "word": "khelna",
+   "class": "actions",
+   "pos": [
+    -25.0,
+    78.45227203143058,
+    66.88148421975313
+   ]
+  },
+  {
+   "word": "jaana",
+   "class": "actions",
+   "pos": [
+    -25.0,
+    127.69265968204097,
+    75.56389310309964
+   ]
+  },
+  {
+   "word": "ruko",
+   "class": "actions",
+   "pos": [
+    -25.0,
+    176.9330473326514,
+    84.24630198644617
+   ]
+  },
+  {
+   "word": "paani",
+   "class": "things",
+   "pos": [
+    25.0,
+    29.211884380820184,
+    58.199075336406615
+   ]
+  },
+  {
+   "word": "khana",
+   "class": "things",
+   "pos": [
+    25.0,
+    78.45227203143058,
+    66.88148421975313
+   ]
+  },
+  {
+   "word": "toilet",
+   "class": "things",
+   "pos": [
+    25.0,
+    127.69265968204097,
+    75.56389310309964
+   ]
+  },
+  {
+   "word": "ghar",
+   "class": "things",
+   "pos": [
+    25.0,
+    176.9330473326514,
+    84.24630198644617
+   ]
+  },
+  {
+   "word": "dard",
+   "class": "urgent / social",
+   "pos": [
+    75.0,
+    29.211884380820184,
+    58.199075336406615
+   ]
+  },
+  {
+   "word": "madad",
+   "class": "urgent / social",
+   "pos": [
+    75.0,
+    78.45227203143058,
+    66.88148421975313
+   ]
+  },
+  {
+   "word": "haan",
+   "class": "urgent / social",
+   "pos": [
+    75.0,
+    127.69265968204097,
+    75.56389310309964
+   ]
+  },
+  {
+   "word": "nahi",
+   "class": "urgent / social",
+   "pos": [
+    75.0,
+    176.9330473326514,
+    84.24630198644617
+   ]
+  }
+ ],
+ "normal": [
+  0.0,
+  -0.17364817766693033,
+  0.984807753012208
+ ],
+ "params": {
+  "W": 240.0,
+  "D": 250.0,
+  "H_FRONT": 40.0,
+  "H_BACK": 84.1,
+  "TILT": 10.0,
+  "WALL": 3.0,
+  "PITCH": 50.0,
+  "KG_HOLE": 44.0,
+  "KEYCAP_D": 40.0,
+  "PICTURE_D": 34.0,
+  "L_SLOPE": 253.9
+ }
+}

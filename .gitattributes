@@ -1,0 +1,8 @@
+# Keep files byte-for-byte as authored; CAD exports must never be rewritten.
+* text=auto eol=lf
+*.step -text
+*.stl binary
+*.dxf -text
+*.pdf binary
+*.png binary
+*.wav binary

@@ -186,5 +186,5 @@ Software (firmware, Studio, tools, tests, CAD scripts): **MIT** ([`LICENSE`](LIC
 [Implementation tracker](implementation.md) · [Implementation audit](docs/IMPLEMENTATION_AUDIT.md) · [Technical design](docs/TECHNICAL_DESIGN.md) · [Serial protocol](docs/SERIAL_PROTOCOL.md) · [Test plan](docs/TEST_PLAN.md) · [Threat model and privacy](docs/THREAT_MODEL_AND_PRIVACY.md) · [Build guide](docs/BUILD_GUIDE.md) · [Demo script](docs/DEMO.md) · [Release checklist](docs/RELEASE_CHECKLIST.md) · [CAD](cad/README.md)
 
 ## 24. Links
-- Repository: https://github.com/payal-priyadarshini-sahoo-pps/vaaniboard (team repository https://github.com/arshpreet-svg/vaaniboard is still empty)
+- Repository: https://github.com/arshpreet-svg/vaaniboard (team) · mirror: https://github.com/payal-priyadarshini-sahoo-pps/vaaniboard
 - Demo video: not recorded yet. Storyboard in [`docs/DEMO.md`](docs/DEMO.md)

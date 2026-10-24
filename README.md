@@ -164,6 +164,7 @@ All sample data is fictional.
 | `WARN set …` after sending a profile | The board refused or clamped that field; the rest was saved |
 | Keys beep instead of speaking | No clip for that key and language; upload clips (§16) |
 | `test_host/run.sh`: ArduinoJson not found | Run `pio run` (or `pio pkg install -e esp32dev`) in `firmware/board` first |
+| Firmware build on Windows: `fatal error: …: No such file or directory` for a file that exists | Windows 260-character path limit. Keep the project in a short folder (e.g. `C:\dev\vaaniboard`) or set `PLATFORMIO_WORKSPACE_DIR` to a short folder |
 More in [`docs/BUILD_GUIDE.md`](docs/BUILD_GUIDE.md) §11 and Studio → Diagnostics.
 
 ## 20. Security, privacy and offline behaviour

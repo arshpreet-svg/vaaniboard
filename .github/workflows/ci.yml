@@ -1,0 +1,92 @@
+# VaaniBoard CI: everything that can be checked without a physical board.
+# Free GitHub-hosted runners only; no secrets or paid services needed.
+name: CI
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+
+permissions:
+  contents: read
+
+jobs:
+  vocabulary:
+    name: Language packs
+    runs-on: ubuntu-24.04
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+      - name: Generated vocabulary is up to date
+        run: node tools/vocab.mjs check
+      - name: Coverage and review status
+        run: node tools/vocab.mjs report
+      - name: Sample packs validate as expected
+        run: |
+          node tools/vocab.mjs validate sample-data/language-packs/mr-partial.json
+          if node tools/vocab.mjs validate sample-data/language-packs/invalid-example.json; then
+            echo "invalid-example.json should have been rejected"; exit 1
+          fi
+
+  studio:
+    name: Studio (lint, test, build)
+    runs-on: ubuntu-24.04
+    defaults:
+      run:
+        working-directory: studio
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+          cache-dependency-path: studio/package-lock.json
+      - run: npm ci
+      - run: npm run lint
+      - run: npm test
+      - run: npm run build
+      - name: Static export exists
+        run: test -f out/index.html
+      - uses: actions/upload-artifact@v4
+        with:
+          name: studio-static
+          path: studio/out
+          retention-days: 14
+
+  firmware:
+    name: Firmware (build + host tests)
+    runs-on: ubuntu-24.04
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - uses: actions/cache@v4
+        with:
+          path: |
+            ~/.platformio
+            firmware/board/.pio/libdeps
+          key: pio-${{ hashFiles('firmware/board/platformio.ini') }}
+      - name: Install PlatformIO
+        run: pip install platformio==6.2.0
+      - name: Build 4-key and 8-key firmware
+        run: pio run -d firmware/board
+      - name: Host tests (lib/vaani_core on the runner)
+        run: CXX=g++ bash firmware/board/test_host/run.sh
+      - uses: actions/upload-artifact@v4
+        with:
+          name: firmware
+          path: firmware/board/.pio/build/*/firmware.bin
+          retention-days: 14
+
+  secrets:
+    name: Secret scan
+    runs-on: ubuntu-24.04
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - name: gitleaks
+        run: docker run --rm -v "$PWD:/repo" ghcr.io/gitleaks/gitleaks:v8.21.2 detect --source /repo --redact --verbose

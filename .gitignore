@@ -1,10 +1,46 @@
-# PlatformIO
+# PlatformIO / firmware builds
 firmware/board/.pio/
 firmware/board/.vscode/
-# Studio
+firmware/board/test_host/build/
+
+# Studio (Next.js)
 studio/node_modules/
 studio/.next/
 studio/out/
-# OS
+studio/coverage/
+*.tsbuildinfo
+next-env.d.ts
+
+# Python (CAD scripts)
+.venv/
+__pycache__/
+*.pyc
+
+# Secrets and local configuration (none are needed; keep it that way)
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+
+# Private data: never commit a child's records or anyone's voice recordings.
+# Voice clips belong in firmware/board/data/<lang>/ on the caregiver's laptop only.
+firmware/board/data/**/*.wav
+firmware/board/data/**/*.mp3
+recordings/
+exports/
+vaaniboard-log-*.csv
+vaaniboard-profiles-*.json
+*.sqlite
+*.db
+
+# Confidential until the provisional patent is filed (see docs/BUILD_GUIDE.md §10)
+*Dossier*.pdf
+*Software_Spec*.pdf
+*Hardware_Spec*.pdf
+
+# OS / editors
 .DS_Store
 Thumbs.db
+.idea/
+*.swp

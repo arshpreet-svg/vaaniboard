@@ -6,7 +6,11 @@
     "languages": [
       "hi",
       "ta",
-      "bn"
+      "bn",
+      "mr",
+      "pa",
+      "or",
+      "en"
     ],
     "keys": [
       {
@@ -460,6 +464,550 @@
           "text": "Byatha korche?",
           "keywords": [
             "byatha"
+          ]
+        }
+      ]
+    },
+    {
+      "schema": "vaaniboard.language-pack/1",
+      "code": "mr",
+      "name": "Marathi",
+      "native_name": "मराठी",
+      "provenance": {
+        "transliteration": "Suggested during the implementation pass (machine-assisted), October 2026. Not reviewed by a native speaker.",
+        "label_native": "Suggested during the implementation pass (machine-assisted). Not reviewed by a native speaker.",
+        "keywords": "Suggested during the implementation pass; check with a special educator before training the listening model."
+      },
+      "keys": [
+        {
+          "id": "k01",
+          "label_native": "हो",
+          "transliteration": "HO",
+          "keywords": [],
+          "audio": "mr/01.wav",
+          "review": {
+            "label_native": "unverified",
+            "transliteration": "unverified"
+          }
+        },
+        {
+          "id": "k02",
+          "label_native": "नाही",
+          "transliteration": "NAHI",
+          "keywords": [],
+          "audio": "mr/02.wav",
+          "review": {
+            "label_native": "unverified",
+            "transliteration": "unverified"
+          }
+        },
+        {
+          "id": "k03",
+          "label_native": "मदत",
+          "transliteration": "MADAT",
+          "keywords": [],
+          "audio": "mr/03.wav",
+          "review": {
+            "label_native": "unverified",
+            "transliteration": "unverified"
+          }
+        },
+        {
+          "id": "k04",
+          "label_native": "थांबा",
+          "transliteration": "THAMBA",
+          "keywords": [],
+          "audio": "mr/04.wav",
+          "review": {
+            "label_native": "unverified",
+            "transliteration": "unverified"
+          }
+        },
+        {
+          "id": "k05",
+          "label_native": "पाणी",
+          "transliteration": "PAANI",
+          "keywords": [
+            "paani"
+          ],
+          "audio": "mr/05.wav",
+          "review": {
+            "label_native": "unverified",
+            "transliteration": "unverified"
+          }
+        },
+        {
+          "id": "k06",
+          "label_native": "जेवण",
+          "transliteration": "JEVAN",
+          "keywords": [
+            "jevan"
+          ],
+          "audio": "mr/06.wav",
+          "review": {
+            "label_native": "unverified",
+            "transliteration": "unverified"
+          }
+        },
+        {
+          "id": "k07",
+          "label_native": "टॉयलेट",
+          "transliteration": "TOILET",
+          "keywords": [
+            "toilet"
+          ],
+          "audio": "mr/07.wav",
+          "review": {
+            "label_native": "unverified",
+            "transliteration": "unverified"
+          }
+        },
+        {
+          "id": "k08",
+          "label_native": "दुखतंय",
+          "transliteration": "DUKHTAY",
+          "keywords": [
+            "dukhtay"
+          ],
+          "audio": "mr/08.wav",
+          "review": {
+            "label_native": "unverified",
+            "transliteration": "unverified"
+          }
+        }
+      ],
+      "prompts": [
+        {
+          "text": "Jevan ki paani?",
+          "keywords": [
+            "jevan",
+            "paani"
+          ]
+        },
+        {
+          "text": "Paani hava ka?",
+          "keywords": [
+            "paani"
+          ]
+        },
+        {
+          "text": "Toilet la jaycha aahe ka?",
+          "keywords": [
+            "toilet"
+          ]
+        },
+        {
+          "text": "Kuthe dukhtay?",
+          "keywords": [
+            "dukhtay"
+          ]
+        }
+      ]
+    },
+    {
+      "schema": "vaaniboard.language-pack/1",
+      "code": "pa",
+      "name": "Punjabi",
+      "native_name": "ਪੰਜਾਬੀ",
+      "provenance": {
+        "transliteration": "Suggested during the implementation pass (machine-assisted), October 2026. Not reviewed by a native speaker.",
+        "label_native": "Suggested during the implementation pass (machine-assisted). Not reviewed by a native speaker.",
+        "keywords": "Suggested during the implementation pass; check with a special educator before training the listening model."
+      },
+      "keys": [
+        {
+          "id": "k01",
+          "label_native": "ਹਾਂ",
+          "transliteration": "HAAN",
+          "keywords": [],
+          "audio": "pa/01.wav",
+          "review": {
+            "label_native": "unverified",
+            "transliteration": "unverified"
+          }
+        },
+        {
+          "id": "k02",
+          "label_native": "ਨਹੀਂ",
+          "transliteration": "NAHIN",
+          "keywords": [],
+          "audio": "pa/02.wav",
+          "review": {
+            "label_native": "unverified",
+            "transliteration": "unverified"
+          }
+        },
+        {
+          "id": "k03",
+          "label_native": "ਮਦਦ",
+          "transliteration": "MADAD",
+          "keywords": [],
+          "audio": "pa/03.wav",
+          "review": {
+            "label_native": "unverified",
+            "transliteration": "unverified"
+          }
+        },
+        {
+          "id": "k04",
+          "label_native": "ਰੁਕੋ",
+          "transliteration": "RUKO",
+          "keywords": [],
+          "audio": "pa/04.wav",
+          "review": {
+            "label_native": "unverified",
+            "transliteration": "unverified"
+          }
+        },
+        {
+          "id": "k05",
+          "label_native": "ਪਾਣੀ",
+          "transliteration": "PAANI",
+          "keywords": [
+            "paani"
+          ],
+          "audio": "pa/05.wav",
+          "review": {
+            "label_native": "unverified",
+            "transliteration": "unverified"
+          }
+        },
+        {
+          "id": "k06",
+          "label_native": "ਖਾਣਾ",
+          "transliteration": "KHAANA",
+          "keywords": [
+            "khaana"
+          ],
+          "audio": "pa/06.wav",
+          "review": {
+            "label_native": "unverified",
+            "transliteration": "unverified"
+          }
+        },
+        {
+          "id": "k07",
+          "label_native": "ਟਾਇਲਟ",
+          "transliteration": "TOILET",
+          "keywords": [
+            "toilet"
+          ],
+          "audio": "pa/07.wav",
+          "review": {
+            "label_native": "unverified",
+            "transliteration": "unverified"
+          }
+        },
+        {
+          "id": "k08",
+          "label_native": "ਦਰਦ",
+          "transliteration": "DARD",
+          "keywords": [
+            "dard"
+          ],
+          "audio": "pa/08.wav",
+          "review": {
+            "label_native": "unverified",
+            "transliteration": "unverified"
+          }
+        }
+      ],
+      "prompts": [
+        {
+          "text": "Khaana ke paani?",
+          "keywords": [
+            "khaana",
+            "paani"
+          ]
+        },
+        {
+          "text": "Paani chahida?",
+          "keywords": [
+            "paani"
+          ]
+        },
+        {
+          "text": "Toilet jaana hai?",
+          "keywords": [
+            "toilet"
+          ]
+        },
+        {
+          "text": "Dard ho reha hai?",
+          "keywords": [
+            "dard"
+          ]
+        }
+      ]
+    },
+    {
+      "schema": "vaaniboard.language-pack/1",
+      "code": "or",
+      "name": "Odia",
+      "native_name": "ଓଡ଼ିଆ",
+      "provenance": {
+        "transliteration": "Suggested during the implementation pass (machine-assisted), October 2026. Not reviewed by a native speaker.",
+        "label_native": "Suggested during the implementation pass (machine-assisted). Not reviewed by a native speaker.",
+        "keywords": "Suggested during the implementation pass; check with a special educator before training the listening model."
+      },
+      "keys": [
+        {
+          "id": "k01",
+          "label_native": "ହଁ",
+          "transliteration": "HAN",
+          "keywords": [],
+          "audio": "or/01.wav",
+          "review": {
+            "label_native": "unverified",
+            "transliteration": "unverified"
+          }
+        },
+        {
+          "id": "k02",
+          "label_native": "ନା",
+          "transliteration": "NA",
+          "keywords": [],
+          "audio": "or/02.wav",
+          "review": {
+            "label_native": "unverified",
+            "transliteration": "unverified"
+          }
+        },
+        {
+          "id": "k03",
+          "label_native": "ସାହାଯ୍ୟ",
+          "transliteration": "SAHAJYA",
+          "keywords": [],
+          "audio": "or/03.wav",
+          "review": {
+            "label_native": "unverified",
+            "transliteration": "unverified"
+          }
+        },
+        {
+          "id": "k04",
+          "label_native": "ରୁହ",
+          "transliteration": "RUHA",
+          "keywords": [],
+          "audio": "or/04.wav",
+          "review": {
+            "label_native": "unverified",
+            "transliteration": "unverified"
+          }
+        },
+        {
+          "id": "k05",
+          "label_native": "ପାଣି",
+          "transliteration": "PAANI",
+          "keywords": [
+            "paani"
+          ],
+          "audio": "or/05.wav",
+          "review": {
+            "label_native": "unverified",
+            "transliteration": "unverified"
+          }
+        },
+        {
+          "id": "k06",
+          "label_native": "ଖାଇବା",
+          "transliteration": "KHAIBA",
+          "keywords": [
+            "khaiba"
+          ],
+          "audio": "or/06.wav",
+          "review": {
+            "label_native": "unverified",
+            "transliteration": "unverified"
+          }
+        },
+        {
+          "id": "k07",
+          "label_native": "ଟଏଲେଟ",
+          "transliteration": "TOILET",
+          "keywords": [
+            "toilet"
+          ],
+          "audio": "or/07.wav",
+          "review": {
+            "label_native": "unverified",
+            "transliteration": "unverified"
+          }
+        },
+        {
+          "id": "k08",
+          "label_native": "ଯନ୍ତ୍ରଣା",
+          "transliteration": "JANTRANA",
+          "keywords": [
+            "jantrana"
+          ],
+          "audio": "or/08.wav",
+          "review": {
+            "label_native": "unverified",
+            "transliteration": "unverified"
+          }
+        }
+      ],
+      "prompts": [
+        {
+          "text": "Khaiba na paani?",
+          "keywords": [
+            "khaiba",
+            "paani"
+          ]
+        },
+        {
+          "text": "Paani darkar?",
+          "keywords": [
+            "paani"
+          ]
+        },
+        {
+          "text": "Toilet jiba?",
+          "keywords": [
+            "toilet"
+          ]
+        },
+        {
+          "text": "Jantrana heuchi ki?",
+          "keywords": [
+            "jantrana"
+          ]
+        }
+      ]
+    },
+    {
+      "schema": "vaaniboard.language-pack/1",
+      "code": "en",
+      "name": "English",
+      "native_name": "English",
+      "provenance": {
+        "transliteration": "Team-authored, October 2026.",
+        "label_native": "Team-authored, October 2026.",
+        "keywords": "Team-authored listening keywords."
+      },
+      "keys": [
+        {
+          "id": "k01",
+          "label_native": "Yes",
+          "transliteration": "YES",
+          "keywords": [],
+          "audio": "en/01.wav",
+          "review": {
+            "label_native": "team-authored",
+            "transliteration": "team-authored"
+          }
+        },
+        {
+          "id": "k02",
+          "label_native": "No",
+          "transliteration": "NO",
+          "keywords": [],
+          "audio": "en/02.wav",
+          "review": {
+            "label_native": "team-authored",
+            "transliteration": "team-authored"
+          }
+        },
+        {
+          "id": "k03",
+          "label_native": "Help",
+          "transliteration": "HELP",
+          "keywords": [],
+          "audio": "en/03.wav",
+          "review": {
+            "label_native": "team-authored",
+            "transliteration": "team-authored"
+          }
+        },
+        {
+          "id": "k04",
+          "label_native": "Stop",
+          "transliteration": "STOP",
+          "keywords": [],
+          "audio": "en/04.wav",
+          "review": {
+            "label_native": "team-authored",
+            "transliteration": "team-authored"
+          }
+        },
+        {
+          "id": "k05",
+          "label_native": "Water",
+          "transliteration": "WATER",
+          "keywords": [
+            "water"
+          ],
+          "audio": "en/05.wav",
+          "review": {
+            "label_native": "team-authored",
+            "transliteration": "team-authored"
+          }
+        },
+        {
+          "id": "k06",
+          "label_native": "Food",
+          "transliteration": "FOOD",
+          "keywords": [
+            "food"
+          ],
+          "audio": "en/06.wav",
+          "review": {
+            "label_native": "team-authored",
+            "transliteration": "team-authored"
+          }
+        },
+        {
+          "id": "k07",
+          "label_native": "Toilet",
+          "transliteration": "TOILET",
+          "keywords": [
+            "toilet"
+          ],
+          "audio": "en/07.wav",
+          "review": {
+            "label_native": "team-authored",
+            "transliteration": "team-authored"
+          }
+        },
+        {
+          "id": "k08",
+          "label_native": "Pain",
+          "transliteration": "PAIN",
+          "keywords": [
+            "pain"
+          ],
+          "audio": "en/08.wav",
+          "review": {
+            "label_native": "team-authored",
+            "transliteration": "team-authored"
+          }
+        }
+      ],
+      "prompts": [
+        {
+          "text": "Food or water?",
+          "keywords": [
+            "food",
+            "water"
+          ]
+        },
+        {
+          "text": "Do you want water?",
+          "keywords": [
+            "water"
+          ]
+        },
+        {
+          "text": "Do you need the toilet?",
+          "keywords": [
+            "toilet"
+          ]
+        },
+        {
+          "text": "Are you in pain?",
+          "keywords": [
+            "pain"
           ]
         }
       ]

@@ -5,8 +5,8 @@
 #include <stdint.h>
 
 // Language order is the caregiver-mode cycle order (keys.json "languages").
-constexpr uint8_t NUM_LANGS = 3;
-constexpr const char* LANG_CODES[NUM_LANGS] = {"hi", "ta", "bn"};
+constexpr uint8_t NUM_LANGS = 7;
+constexpr const char* LANG_CODES[NUM_LANGS] = {"hi", "ta", "bn", "mr", "pa", "or", "en"};
 
 // Labels are transliterated because the 16x2 LCD cannot show Devanagari,
 // Tamil or Bengali script. Order follows LANG_CODES.
@@ -22,14 +22,14 @@ constexpr uint8_t CORE_KEYS = 4;
 constexpr uint8_t VOCAB_KEYS = 8;
 
 constexpr Word VOCAB[VOCAB_KEYS] = {
-    {{"HAAN", "AAMAM", "HYAN"}, "yes", false},
-    {{"NAHI", "ILLAI", "NA"}, "no", false},
-    {{"MADAD", "UDHAVI", "SAHAJYO"}, "help", true},
-    {{"RUKO", "NILLU", "THAMO"}, "stop", true},
-    {{"PAANI", "THANNEER", "JOL"}, "water", false},
-    {{"KHANA", "SAAPADU", "KHABAR"}, "food", false},
-    {{"TOILET", "TOILET", "TOILET"}, "toilet", true},
-    {{"DARD", "VALI", "BYATHA"}, "pain", true},
+    {{"HAAN", "AAMAM", "HYAN", "HO", "HAAN", "HAN", "YES"}, "yes", false},
+    {{"NAHI", "ILLAI", "NA", "NAHI", "NAHIN", "NA", "NO"}, "no", false},
+    {{"MADAD", "UDHAVI", "SAHAJYO", "MADAT", "MADAD", "SAHAJYA", "HELP"}, "help", true},
+    {{"RUKO", "NILLU", "THAMO", "THAMBA", "RUKO", "RUHA", "STOP"}, "stop", true},
+    {{"PAANI", "THANNEER", "JOL", "PAANI", "PAANI", "PAANI", "WATER"}, "water", false},
+    {{"KHANA", "SAAPADU", "KHABAR", "JEVAN", "KHAANA", "KHAIBA", "FOOD"}, "food", false},
+    {{"TOILET", "TOILET", "TOILET", "TOILET", "TOILET", "TOILET", "TOILET"}, "toilet", true},
+    {{"DARD", "VALI", "BYATHA", "DUKHTAY", "DARD", "JANTRANA", "PAIN"}, "pain", true},
 };
 
 // Keyword reported by the listening model -> vocabulary key (0-based) it highlights.
@@ -50,6 +50,14 @@ constexpr KeywordMap KEYWORDS[] = {
     {"jol", 4},
     {"khabar", 5},
     {"byatha", 7},
+    {"jevan", 5},
+    {"dukhtay", 7},
+    {"khaana", 5},
+    {"khaiba", 5},
+    {"jantrana", 7},
+    {"water", 4},
+    {"food", 5},
+    {"pain", 7},
 };
 constexpr size_t NUM_KEYWORDS = sizeof(KEYWORDS) / sizeof(KEYWORDS[0]);
 

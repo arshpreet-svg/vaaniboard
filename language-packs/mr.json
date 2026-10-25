@@ -1,0 +1,136 @@
+{
+  "schema": "vaaniboard.language-pack/1",
+  "code": "mr",
+  "name": "Marathi",
+  "native_name": "मराठी",
+  "provenance": {
+    "transliteration": "Suggested during the implementation pass (machine-assisted), October 2026. Not reviewed by a native speaker.",
+    "label_native": "Suggested during the implementation pass (machine-assisted). Not reviewed by a native speaker.",
+    "keywords": "Suggested during the implementation pass; check with a special educator before training the listening model."
+  },
+  "keys": [
+    {
+      "id": "k01",
+      "label_native": "हो",
+      "transliteration": "HO",
+      "keywords": [],
+      "audio": "mr/01.wav",
+      "review": {
+        "label_native": "unverified",
+        "transliteration": "unverified"
+      }
+    },
+    {
+      "id": "k02",
+      "label_native": "नाही",
+      "transliteration": "NAHI",
+      "keywords": [],
+      "audio": "mr/02.wav",
+      "review": {
+        "label_native": "unverified",
+        "transliteration": "unverified"
+      }
+    },
+    {
+      "id": "k03",
+      "label_native": "मदत",
+      "transliteration": "MADAT",
+      "keywords": [],
+      "audio": "mr/03.wav",
+      "review": {
+        "label_native": "unverified",
+        "transliteration": "unverified"
+      }
+    },
+    {
+      "id": "k04",
+      "label_native": "थांबा",
+      "transliteration": "THAMBA",
+      "keywords": [],
+      "audio": "mr/04.wav",
+      "review": {
+        "label_native": "unverified",
+        "transliteration": "unverified"
+      }
+    },
+    {
+      "id": "k05",
+      "label_native": "पाणी",
+      "transliteration": "PAANI",
+      "keywords": [
+        "paani"
+      ],
+      "audio": "mr/05.wav",
+      "review": {
+        "label_native": "unverified",
+        "transliteration": "unverified"
+      }
+    },
+    {
+      "id": "k06",
+      "label_native": "जेवण",
+      "transliteration": "JEVAN",
+      "keywords": [
+        "jevan"
+      ],
+      "audio": "mr/06.wav",
+      "review": {
+        "label_native": "unverified",
+        "transliteration": "unverified"
+      }
+    },
+    {
+      "id": "k07",
+      "label_native": "टॉयलेट",
+      "transliteration": "TOILET",
+      "keywords": [
+        "toilet"
+      ],
+      "audio": "mr/07.wav",
+      "review": {
+        "label_native": "unverified",
+        "transliteration": "unverified"
+      }
+    },
+    {
+      "id": "k08",
+      "label_native": "दुखतंय",
+      "transliteration": "DUKHTAY",
+      "keywords": [
+        "dukhtay"
+      ],
+      "audio": "mr/08.wav",
+      "review": {
+        "label_native": "unverified",
+        "transliteration": "unverified"
+      }
+    }
+  ],
+  "prompts": [
+    {
+      "text": "Jevan ki paani?",
+      "keywords": [
+        "jevan",
+        "paani"
+      ]
+    },
+    {
+      "text": "Paani hava ka?",
+      "keywords": [
+        "paani"
+      ]
+    },
+    {
+      "text": "Toilet la jaycha aahe ka?",
+      "keywords": [
+        "toilet"
+      ]
+    },
+    {
+      "text": "Kuthe dukhtay?",
+      "keywords": [
+        "dukhtay"
+      ]
+    }
+  ]
+}

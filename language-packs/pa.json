@@ -1,0 +1,136 @@
+{
+  "schema": "vaaniboard.language-pack/1",
+  "code": "pa",
+  "name": "Punjabi",
+  "native_name": "ਪੰਜਾਬੀ",
+  "provenance": {
+    "transliteration": "Suggested during the implementation pass (machine-assisted), October 2026. Not reviewed by a native speaker.",
+    "label_native": "Suggested during the implementation pass (machine-assisted). Not reviewed by a native speaker.",
+    "keywords": "Suggested during the implementation pass; check with a special educator before training the listening model."
+  },
+  "keys": [
+    {
+      "id": "k01",
+      "label_native": "ਹਾਂ",
+      "transliteration": "HAAN",
+      "keywords": [],
+      "audio": "pa/01.wav",
+      "review": {
+        "label_native": "unverified",
+        "transliteration": "unverified"
+      }
+    },
+    {
+      "id": "k02",
+      "label_native": "ਨਹੀਂ",
+      "transliteration": "NAHIN",
+      "keywords": [],
+      "audio": "pa/02.wav",
+      "review": {
+        "label_native": "unverified",
+        "transliteration": "unverified"
+      }
+    },
+    {
+      "id": "k03",
+      "label_native": "ਮਦਦ",
+      "transliteration": "MADAD",
+      "keywords": [],
+      "audio": "pa/03.wav",
+      "review": {
+        "label_native": "unverified",
+        "transliteration": "unverified"
+      }
+    },
+    {
+      "id": "k04",
+      "label_native": "ਰੁਕੋ",
+      "transliteration": "RUKO",
+      "keywords": [],
+      "audio": "pa/04.wav",
+      "review": {
+        "label_native": "unverified",
+        "transliteration": "unverified"
+      }
+    },
+    {
+      "id": "k05",
+      "label_native": "ਪਾਣੀ",
+      "transliteration": "PAANI",
+      "keywords": [
+        "paani"
+      ],
+      "audio": "pa/05.wav",
+      "review": {
+        "label_native": "unverified",
+        "transliteration": "unverified"
+      }
+    },
+    {
+      "id": "k06",
+      "label_native": "ਖਾਣਾ",
+      "transliteration": "KHAANA",
+      "keywords": [
+        "khaana"
+      ],
+      "audio": "pa/06.wav",
+      "review": {
+        "label_native": "unverified",
+        "transliteration": "unverified"
+      }
+    },
+    {
+      "id": "k07",
+      "label_native": "ਟਾਇਲਟ",
+      "transliteration": "TOILET",
+      "keywords": [
+        "toilet"
+      ],
+      "audio": "pa/07.wav",
+      "review": {
+        "label_native": "unverified",
+        "transliteration": "unverified"
+      }
+    },
+    {
+      "id": "k08",
+      "label_native": "ਦਰਦ",
+      "transliteration": "DARD",
+      "keywords": [
+        "dard"
+      ],
+      "audio": "pa/08.wav",
+      "review": {
+        "label_native": "unverified",
+        "transliteration": "unverified"
+      }
+    }
+  ],
+  "prompts": [
+    {
+      "text": "Khaana ke paani?",
+      "keywords": [
+        "khaana",
+        "paani"
+      ]
+    },
+    {
+      "text": "Paani chahida?",
+      "keywords": [
+        "paani"
+      ]
+    },
+    {
+      "text": "Toilet jaana hai?",
+      "keywords": [
+        "toilet"
+      ]
+    },
+    {
+      "text": "Dard ho reha hai?",
+      "keywords": [
+        "dard"
+      ]
+    }
+  ]
+}

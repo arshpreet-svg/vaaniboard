@@ -1,0 +1,136 @@
+{
+  "schema": "vaaniboard.language-pack/1",
+  "code": "en",
+  "name": "English",
+  "native_name": "English",
+  "provenance": {
+    "transliteration": "Team-authored, October 2026.",
+    "label_native": "Team-authored, October 2026.",
+    "keywords": "Team-authored listening keywords."
+  },
+  "keys": [
+    {
+      "id": "k01",
+      "label_native": "Yes",
+      "transliteration": "YES",
+      "keywords": [],
+      "audio": "en/01.wav",
+      "review": {
+        "label_native": "team-authored",
+        "transliteration": "team-authored"
+      }
+    },
+    {
+      "id": "k02",
+      "label_native": "No",
+      "transliteration": "NO",
+      "keywords": [],
+      "audio": "en/02.wav",
+      "review": {
+        "label_native": "team-authored",
+        "transliteration": "team-authored"
+      }
+    },
+    {
+      "id": "k03",
+      "label_native": "Help",
+      "transliteration": "HELP",
+      "keywords": [],
+      "audio": "en/03.wav",
+      "review": {
+        "label_native": "team-authored",
+        "transliteration": "team-authored"
+      }
+    },
+    {
+      "id": "k04",
+      "label_native": "Stop",
+      "transliteration": "STOP",
+      "keywords": [],
+      "audio": "en/04.wav",
+      "review": {
+        "label_native": "team-authored",
+        "transliteration": "team-authored"
+      }
+    },
+    {
+      "id": "k05",
+      "label_native": "Water",
+      "transliteration": "WATER",
+      "keywords": [
+        "water"
+      ],
+      "audio": "en/05.wav",
+      "review": {
+        "label_native": "team-authored",
+        "transliteration": "team-authored"
+      }
+    },
+    {
+      "id": "k06",
+      "label_native": "Food",
+      "transliteration": "FOOD",
+      "keywords": [
+        "food"
+      ],
+      "audio": "en/06.wav",
+      "review": {
+        "label_native": "team-authored",
+        "transliteration": "team-authored"
+      }
+    },
+    {
+      "id": "k07",
+      "label_native": "Toilet",
+      "transliteration": "TOILET",
+      "keywords": [
+        "toilet"
+      ],
+      "audio": "en/07.wav",
+      "review": {
+        "label_native": "team-authored",
+        "transliteration": "team-authored"
+      }
+    },
+    {
+      "id": "k08",
+      "label_native": "Pain",
+      "transliteration": "PAIN",
+      "keywords": [
+        "pain"
+      ],
+      "audio": "en/08.wav",
+      "review": {
+        "label_native": "team-authored",
+        "transliteration": "team-authored"
+      }
+    }
+  ],
+  "prompts": [
+    {
+      "text": "Food or water?",
+      "keywords": [
+        "food",
+        "water"
+      ]
+    },
+    {
+      "text": "Do you want water?",
+      "keywords": [
+        "water"
+      ]
+    },
+    {
+      "text": "Do you need the toilet?",
+      "keywords": [
+        "toilet"
+      ]
+    },
+    {
+      "text": "Are you in pain?",
+      "keywords": [
+        "pain"
+      ]
+    }
+  ]
+}

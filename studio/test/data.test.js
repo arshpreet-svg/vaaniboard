@@ -5,7 +5,7 @@ import { DEFAULT_PROFILE, exportProfiles, importProfiles, removeProfile, upsertP
 import { KEYS, load, remove, save } from '../lib/storage.js';
 import { encodeWav8, inspectWav } from '../lib/wav.js';
 
-const LANGS = ['hi', 'ta', 'bn'];
+const LANGS = ['hi', 'ta', 'bn', 'mr', 'pa', 'or', 'en'];
 const sample = (p) => readFileSync(new URL(`../../sample-data/${p}`, import.meta.url), 'utf8');
 
 // Minimal localStorage for node.

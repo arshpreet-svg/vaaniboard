@@ -1,0 +1,136 @@
+{
+  "schema": "vaaniboard.language-pack/1",
+  "code": "or",
+  "name": "Odia",
+  "native_name": "ଓଡ଼ିଆ",
+  "provenance": {
+    "transliteration": "Suggested during the implementation pass (machine-assisted), October 2026. Not reviewed by a native speaker.",
+    "label_native": "Suggested during the implementation pass (machine-assisted). Not reviewed by a native speaker.",
+    "keywords": "Suggested during the implementation pass; check with a special educator before training the listening model."
+  },
+  "keys": [
+    {
+      "id": "k01",
+      "label_native": "ହଁ",
+      "transliteration": "HAN",
+      "keywords": [],
+      "audio": "or/01.wav",
+      "review": {
+        "label_native": "unverified",
+        "transliteration": "unverified"
+      }
+    },
+    {
+      "id": "k02",
+      "label_native": "ନା",
+      "transliteration": "NA",
+      "keywords": [],
+      "audio": "or/02.wav",
+      "review": {
+        "label_native": "unverified",
+        "transliteration": "unverified"
+      }
+    },
+    {
+      "id": "k03",
+      "label_native": "ସାହାଯ୍ୟ",
+      "transliteration": "SAHAJYA",
+      "keywords": [],
+      "audio": "or/03.wav",
+      "review": {
+        "label_native": "unverified",
+        "transliteration": "unverified"
+      }
+    },
+    {
+      "id": "k04",
+      "label_native": "ରୁହ",
+      "transliteration": "RUHA",
+      "keywords": [],
+      "audio": "or/04.wav",
+      "review": {
+        "label_native": "unverified",
+        "transliteration": "unverified"
+      }
+    },
+    {
+      "id": "k05",
+      "label_native": "ପାଣି",
+      "transliteration": "PAANI",
+      "keywords": [
+        "paani"
+      ],
+      "audio": "or/05.wav",
+      "review": {
+        "label_native": "unverified",
+        "transliteration": "unverified"
+      }
+    },
+    {
+      "id": "k06",
+      "label_native": "ଖାଇବା",
+      "transliteration": "KHAIBA",
+      "keywords": [
+        "khaiba"
+      ],
+      "audio": "or/06.wav",
+      "review": {
+        "label_native": "unverified",
+        "transliteration": "unverified"
+      }
+    },
+    {
+      "id": "k07",
+      "label_native": "ଟଏଲେଟ",
+      "transliteration": "TOILET",
+      "keywords": [
+        "toilet"
+      ],
+      "audio": "or/07.wav",
+      "review": {
+        "label_native": "unverified",
+        "transliteration": "unverified"
+      }
+    },
+    {
+      "id": "k08",
+      "label_native": "ଯନ୍ତ୍ରଣା",
+      "transliteration": "JANTRANA",
+      "keywords": [
+        "jantrana"
+      ],
+      "audio": "or/08.wav",
+      "review": {
+        "label_native": "unverified",
+        "transliteration": "unverified"
+      }
+    }
+  ],
+  "prompts": [
+    {
+      "text": "Khaiba na paani?",
+      "keywords": [
+        "khaiba",
+        "paani"
+      ]
+    },
+    {
+      "text": "Paani darkar?",
+      "keywords": [
+        "paani"
+      ]
+    },
+    {
+      "text": "Toilet jiba?",
+      "keywords": [
+        "toilet"
+      ]
+    },
+    {
+      "text": "Jantrana heuchi ki?",
+      "keywords": [
+        "jantrana"
+      ]
+    }
+  ]
+}

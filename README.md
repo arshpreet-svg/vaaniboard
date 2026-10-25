@@ -29,7 +29,7 @@ VaaniBoard is two things:
 | Listening assistance | A key lights only after two confident (≥ 0.8) keyword results in a row, fades after 10 s, never speaks or selects. **Simulated** in Studio for now |
 | Studio | Dashboard, live board, profiles, vocabulary packs, voice clips, simulated listening, history + CSV, diagnostics, simulator |
 | Accessibility (Studio) | Keyboard-only use, screen-reader labels and announcements, visible focus, high contrast, larger text, reduced motion |
-| Multilingual | Hindi, Tamil, Bengali vocabulary from JSON language packs; add a language without code changes |
+| Multilingual | Hindi, Tamil, Bengali, Marathi, Punjabi, Odia, English vocabulary from JSON language packs; add a language without code changes |
 
 ## 4. Target users and use cases
 - **Children** aged roughly 3-12 who are non-verbal or minimally verbal (autism, cerebral palsy, apraxia), including those who need switch access.

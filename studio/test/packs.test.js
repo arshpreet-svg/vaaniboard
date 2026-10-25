@@ -13,7 +13,7 @@ describe('built-in language packs', () => {
     expect(KEYSET.keys.slice(0, 4).map((k) => [k.meaning, k.core])).toEqual([['yes', true], ['no', true], ['help', true], ['stop', true]]);
   });
 
-  it.each(['hi', 'ta', 'bn'])('%s has no errors and covers every key', (code) => {
+  it.each(['hi', 'ta', 'bn', 'mr', 'pa', 'or', 'en'])('%s has no errors and covers every key', (code) => {
     const r = validatePack(BUILTIN_PACKS.find((p) => p.code === code), KEYSET);
     expect(r.errors).toEqual([]);
     expect(r.coverage.transliteration).toBe(8);
@@ -90,6 +90,6 @@ describe('incomplete packs fall back safely', () => {
     const edited = { ...hi(), name: 'Hindi (school)' };
     const merged = mergePacks([edited]);
     expect(merged.find((p) => p.code === 'hi')).toMatchObject({ name: 'Hindi (school)', origin: 'edited' });
-    expect(merged).toHaveLength(3);
+    expect(merged).toHaveLength(7);
   });
 });

@@ -147,7 +147,7 @@ export default function Vocabulary({ packs, importedPacks, setImportedPacks }) {
       <Panel title="What &ldquo;supported&rdquo; means here">
         <ul className="plain">
           <li><strong>Interface labels:</strong> Studio itself is in English only.</li>
-          <li><strong>Vocabulary:</strong> 8 words in Hindi, Tamil and Bengali. Transliterations were written by the team; native-script labels still await native-speaker review.</li>
+          <li><strong>Vocabulary:</strong> 8 words in Hindi, Tamil, Bengali, Marathi, Punjabi, Odia and English. Hindi, Tamil and Bengali transliterations were written by the team; Marathi, Punjabi and Odia words and all native-script labels still await native-speaker review.</li>
           <li><strong>Speech:</strong> only recorded voices (Voices tab). There is no text-to-speech.</li>
           <li><strong>Speech recognition:</strong> not built yet. The Listening tab simulates keyword results.</li>
           <li><strong>Add a language:</strong> copy a pack, change <code>code</code> and <code>name</code>, fill the labels, import it here to check it, then add it to <code>language-packs/</code> and <code>keys.json</code>.</li>

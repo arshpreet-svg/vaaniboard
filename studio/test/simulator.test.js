@@ -63,7 +63,7 @@ describe('BoardModel serial commands', () => {
   it('boots with HELLO and CFG that Studio can parse', () => {
     const [hello, cfg] = new BoardModel({ keys: 4 }).boot();
     expect(parseLine(hello)).toMatchObject({ type: 'hello', hello: { keys: 4, proto: 1 } });
-    expect(parseLine(cfg).cfg).toMatchObject({ child: 'C01', keys: 4, proto: 1, langs: ['hi', 'ta', 'bn'] });
+    expect(parseLine(cfg).cfg).toMatchObject({ child: 'C01', keys: 4, proto: 1, langs: ['hi', 'ta', 'bn', 'mr', 'pa', 'or', 'en'] });
   });
 
   it('press emits an EVT line with input "sim"', () => {
@@ -156,7 +156,7 @@ describe('BoardModel serial commands', () => {
   it('info reports capabilities and that it is simulated', () => {
     const info = parseLine(run(new BoardModel({ keys: 4 }), 'info')[0]).info;
     expect(info.caps).toContain('simulated');
-    expect(info.clips).toEqual({ hi: '0000', ta: '0000', bn: '0000' });
+    expect(info.clips).toEqual({ hi: '0000', ta: '0000', bn: '0000', mr: '0000', pa: '0000', or: '0000', en: '0000' });
     expect(info.fs).toBe(false);
   });
 

@@ -1,7 +1,7 @@
 {
   "schema": "vaaniboard.keyset/1",
   "comment": "Stable key slots shared by every language. Slot numbers are the physical key and the clip file name (01.wav). Never renumber a slot; add new ones at the end. Keys 1-4 are the core row and must stay core.",
-  "languages": ["hi", "ta", "bn"],
+  "languages": ["hi", "ta", "bn", "mr", "pa", "or", "en"],
   "keys": [
     { "id": "k01", "slot": 1, "meaning": "yes", "core": true, "urgent": false },
     { "id": "k02", "slot": 2, "meaning": "no", "core": true, "urgent": false },

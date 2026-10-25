@@ -1,7 +1,7 @@
 {
   "schema": "vaaniboard.events/1",
   "synthetic": true,
-  "comment": "FICTIONAL demo session for Studio's History tab and tests. Child codes are made up; no real child or classroom produced these events. Fields follow the board's EVT line (docs/SERIAL_PROTOCOL.md).",
+  "comment": "FICTIONAL demo session for Studio's History tab and tests. Child codes are made up; no real child or classroom produced these events. Fields follow the board's EVT line (README, \"Serial commands\").",
   "events": [
     { "ms": 61200, "child": "D01", "event": "select", "key": 1, "word": "yes", "lang": "hi", "input": "press" },
     { "ms": 95400, "child": "D01", "event": "highlight", "key": 6, "word": "food", "lang": "hi", "input": "listen" },

@@ -2,7 +2,7 @@
 #include <stddef.h>
 #include <stdint.h>
 
-// Serial protocol version (docs/SERIAL_PROTOCOL.md). Bump only for changes an
+// Serial protocol version (README, "Serial commands"). Bump only for changes an
 // older Studio cannot ignore; adding fields or commands keeps the version.
 constexpr uint8_t PROTO_VERSION = 1;
 constexpr size_t SERIAL_LINE_MAX = 255;

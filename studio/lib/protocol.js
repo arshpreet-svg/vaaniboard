@@ -1,4 +1,4 @@
-// Board serial protocol (docs/SERIAL_PROTOCOL.md): one text line per message,
+// Board serial protocol (README, "Serial commands"): one text line per message,
 // 115200 baud, newline terminated. This parser accepts both protocol v1
 // (firmware 0.2+) and the original v0 lines, and never throws: anything it
 // does not understand comes back as { type: 'text' } or { type: 'malformed' }.

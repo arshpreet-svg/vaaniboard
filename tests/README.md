@@ -12,4 +12,4 @@ So when a rule changes, change the vector first; both implementations must then 
 | `vectors/config.json` | Profile validation: defaults, clamping, rejected fields and the warnings they produce |
 | `vectors/listening.json` | Listening assistance: two confident results in a row, threshold, pairing window, 10 s fade, core row never lit, muted while speaking |
 
-The other tests live next to the code they test (`firmware/board/test_host/`, `studio/test/`). How to run everything: [`docs/TEST_PLAN.md`](../docs/TEST_PLAN.md).
+The other tests live next to the code they test (`firmware/board/test_host/`, `studio/test/`). How to run everything: [README §17](../README.md#17-tests).

@@ -5,7 +5,7 @@ An offline, personalised AAC (augmentative and alternative communication) board 
 Vishwakarma Awards 2026-27 · Assistive Solutions · Application ID **VK26-IITI-AS-0216**
 Team: Arshpreet Sukhdeep Singh Dhillon, Payal Priyadarshini Sahoo, Anusha Sharma
 
-> **Status (October 2026, firmware 0.2.0 / Studio 0.2.0).** Breadboard prototype on a classic ESP32 DevKit plus the VaaniBoard Studio web app. Software is built and tested on a laptop and in CI (192 automated tests). **Firmware 0.2.0 has not yet been run on the physical board**: see [Current limitations](#21-current-limitations) and the hardware checklist in [`docs/TEST_PLAN.md`](docs/TEST_PLAN.md#5-physical-hardware-validation-manual-not-yet-performed-for-firmware-020). Listening is simulated; there is no microphone or keyword model yet.
+> **Status (October 2026, firmware 0.2.0 / Studio 0.2.0).** Breadboard prototype on a classic ESP32 DevKit plus the VaaniBoard Studio web app. Software is built and tested on a laptop and in CI (192 automated tests). **Firmware 0.2.0 has not yet been run on the physical board**: see [Current limitations](#21-current-limitations). Listening is simulated; there is no microphone or keyword model yet.
 
 ---
 
@@ -46,7 +46,7 @@ flowchart LR
     packs[(language-packs/*.json)] -- tools/vocab.mjs --> board
     packs -- tools/vocab.mjs --> studio
 ```
-No backend, database server, cloud service or account is involved; the reasons are in [`docs/TECHNICAL_DESIGN.md`](docs/TECHNICAL_DESIGN.md) (ADR-1).
+No backend, database server, cloud service or account is involved: the board keeps the only data communication needs, and Studio keeps its own small data in the browser.
 
 | Folder | What |
 |---|---|
@@ -57,11 +57,10 @@ No backend, database server, cloud service or account is involved; the reasons a
 | `tests/vectors/` | Rule test cases shared by the firmware and simulator tests |
 | `sample-data/` | Fictional profiles, demo events, example language packs |
 | `cad/` | CadQuery model, STEP/STL, keyguard DXF, A3 drawing, renders |
-| `docs/` | Build guide, design, protocol, test plan, privacy, release checklist, demo script, audit |
 
 ## 6. Prerequisites
 **Software:** Git; Node.js 20 or newer (tested with 24.22); for firmware, PlatformIO Core 6.2 (`pip install platformio==6.2.0`, or the PlatformIO IDE extension for VS Code); for firmware host tests, a C++17 compiler (`g++`, `clang++`, or `pip install ziglang` → `zig c++`).
-**Hardware (optional):** ESP32 DevKit (WROOM-32), 5 push buttons (9 for the 8-key build), LEDs, 220 Ω and 10 kΩ resistors, 16×2 I2C LCD, buzzer, reed switch + magnet, breadboards; optional PAM8403 amplifier and speaker. Full list and wiring: [`docs/BUILD_GUIDE.md`](docs/BUILD_GUIDE.md).
+**Hardware (optional):** ESP32 DevKit (WROOM-32), 5 push buttons (9 for the 8-key build), LEDs, 220 Ω and 10 kΩ resistors, 16×2 I2C LCD, buzzer, reed switch + magnet, breadboards; optional PAM8403 amplifier and speaker. Wiring: see [Wiring](#wiring-4-key-build) below.
 
 ## 7. Supported systems and browsers
 | | Supported |
@@ -95,7 +94,7 @@ npm test
 Open **http://localhost:3000** in Chrome or Edge. Click **Connect board** and choose the CP210x port, or **Use simulator**. Close any PlatformIO / Arduino serial monitor first: only one program can use the port.
 
 ## 11-12. Backend and database
-There is no backend and no database. The board keeps its profile in its own flash; Studio keeps profiles, settings and (only if you opt in) the event history in the browser's `localStorage`, with JSON and CSV export for backup. See ADR-1 in [`docs/TECHNICAL_DESIGN.md`](docs/TECHNICAL_DESIGN.md).
+There is no backend and no database. The board keeps its profile in its own flash; Studio keeps profiles, settings and (only if you opt in) the event history in the browser's `localStorage`, with JSON and CSV export for backup.
 
 ## 13. Firmware: build and flash
 ```bash
@@ -111,13 +110,13 @@ OK lcd at 0x27
 HELLO vaaniboard 0.2.0 keys=4 fs=none proto=1
 CFG {"child":"C01","lang":"hi","mode":"direct","hold_ms":0,"lockout_ms":1500,"scan_ms":1500,"volume":60,"listening":true,"keys":4,"fw":"0.2.0","proto":1,"langs":["hi","ta","bn"]}
 ```
-(These lines are what the code prints; they have not yet been captured from a board running 0.2.0.) Serial commands: [`docs/SERIAL_PROTOCOL.md`](docs/SERIAL_PROTOCOL.md). Pin map: `firmware/board/src/pins.h` and [`docs/BUILD_GUIDE.md`](docs/BUILD_GUIDE.md) §4.
+(These lines are what the code prints; they have not yet been captured from a board running 0.2.0.) Serial commands: [below](#serial-commands-115200-baud-one-line-each). Pin map: `firmware/board/src/pins.h` and [Wiring](#wiring-4-key-build).
 
 ## 14. Simulator
 Studio → **Use simulator** (header) or Home → **Simulator, 8 keys / 4 keys**. The simulator runs the board's rules in the browser and answers the same serial commands, so every tab works. Everything it produces is marked **SIMULATOR** on screen and `simulator` in History and in CSV exports. Diagnostics → **Simulate USB unplug** shows how Studio handles a pulled cable.
 
 ## 15. Connecting a physical board
-1. Wire it as in [`docs/BUILD_GUIDE.md`](docs/BUILD_GUIDE.md) §4 and flash it (§13 above).
+1. Wire it as in [Wiring](#wiring-4-key-build) and flash it (§13 above).
 2. Close the serial monitor. Run Studio (§10) and open it in Chrome or Edge.
 3. **Connect board** → pick the CP210x / USB serial port. Home shows firmware, protocol, keys, languages and which voice clips are on the board.
 4. Unplugging is safe: the board keeps working, and Studio reconnects when the same port comes back.
@@ -133,7 +132,7 @@ Studio → **Use simulator** (header) or Home → **Simulator, 8 keys / 4 keys**
   | Text-to-speech / speech recognition | not implemented | not implemented | not implemented |
 
   Native-script labels need review by a native speaker before classroom use. `node tools/vocab.mjs report` prints the current state.
-- **Change or add words/languages:** edit `language-packs/*.json` (schema in `docs/TECHNICAL_DESIGN.md` §7), then `node tools/vocab.mjs gen` and re-flash. Studio → Vocabulary can edit a copy, import or export a pack and validate it first. To add a language, create `language-packs/<code>.json`, add the code to `keys.json` `languages`, regenerate and rebuild. No code changes.
+- **Change or add words/languages:** edit `language-packs/*.json` (see `hi.json` for the format), then `node tools/vocab.mjs gen` and re-flash. Studio → Vocabulary can edit a copy, import or export a pack and validate it first. To add a language, create `language-packs/<code>.json`, add the code to `keys.json` `languages`, regenerate and rebuild. No code changes.
 - **Voice clips:** Studio → Voices → record (or import) each word, check the result, download `NN.wav`, save it to `firmware/board/data/<lang>/`, then `pio run -e esp32dev -t uploadfs`. Board format: mono PCM, 8 or 16-bit, 4-22.05 kHz, ≤ 3 s. Recordings are git-ignored; never commit them, and never record the child.
 
 ## 17. Tests
@@ -142,7 +141,7 @@ node tools/vocab.mjs check                              # vocabulary in sync
 cd studio && npm test                                   # 162 tests: unit, simulator, links, jsdom workflows
 cd firmware/board && pio run && bash test_host/run.sh   # firmware builds + 30 host tests (CXX=g++ by default)
 ```
-Without `g++` (e.g. Windows): `pip install ziglang`, then `CXX="py -m ziglang c++" bash test_host/run.sh` from Git Bash (`python3 -m ziglang c++` elsewhere). Full plan, coverage and the manual hardware checklist: [`docs/TEST_PLAN.md`](docs/TEST_PLAN.md).
+Without `g++` (e.g. Windows): `pip install ziglang`, then `CXX="py -m ziglang c++" bash test_host/run.sh` from Git Bash (`python3 -m ziglang c++` elsewhere).
 
 ## 18. Sample data and expected results
 | File | Use | Expected |
@@ -165,10 +164,10 @@ All sample data is fictional.
 | Keys beep instead of speaking | No clip for that key and language; upload clips (§16) |
 | `test_host/run.sh`: ArduinoJson not found | Run `pio run` (or `pio pkg install -e esp32dev`) in `firmware/board` first |
 | Firmware build on Windows: `fatal error: …: No such file or directory` for a file that exists | Windows 260-character path limit. Keep the project in a short folder (e.g. `C:\dev\vaaniboard`) or set `PLATFORMIO_WORKSPACE_DIR` to a short folder |
-More in [`docs/BUILD_GUIDE.md`](docs/BUILD_GUIDE.md) §11 and Studio → Diagnostics.
+More in Studio → Diagnostics.
 
 ## 20. Security, privacy and offline behaviour
-Only a child code (like `C01`) is stored, never a name. No audio of the child is recorded. Nothing leaves the laptop or the board: the Studio page makes no network requests and `npm start` serves it on localhost only. Voice clips, exported logs and profiles are git-ignored. Details, retention and deletion: [`docs/THREAT_MODEL_AND_PRIVACY.md`](docs/THREAT_MODEL_AND_PRIVACY.md).
+Only a child code (like `C01`) is stored, never a name. No audio of the child is recorded. Nothing leaves the laptop or the board: the Studio page makes no network requests and `npm start` serves it on localhost only. Voice clips, exported logs and profiles are git-ignored. To delete data: Profiles → Delete, History → Clear, or clear the site data in the browser; `reset` on the board.
 
 ## 21. Current limitations
 - **Not yet hardware-verified:** firmware 0.2.0 compiles for both builds and its logic passes laptop tests, but it has not been run on the breadboard. Run the checks in [Before a demo](#before-a-demo-on-the-board) once the board is built.
@@ -179,12 +178,49 @@ Only a child code (like `C01`) is stored, never a name. No audio of the child is
 - Studio data lives in one browser profile; clearing site data removes it (export first).
 - Not built yet: 16-key board, WS2812B lights, I2S amplifier, microSD, battery, 3D-printed housing (designs in `cad/`).
 
+## Wiring (4-key build)
+Unplug USB while wiring. ESP32 pins are 3.3 V only. Every button uses two diagonally opposite legs: one to the GPIO, one to GND (no resistors; the firmware enables internal pull-ups). All GNDs share one rail.
+
+| GPIO | Connect | GPIO | Connect |
+|---|---|---|---|
+| 32 | Key 1 Yes (button → GND) | 16 | LED 1 (220 Ω → LED → GND) |
+| 33 | Key 2 No | 17 | LED 2 |
+| 27 | Key 3 Help | 18 | LED 3 |
+| 13 | Key 4 Stop | 19 | LED 4 |
+| 14 | Access switch (button → GND) | 2 | Status LED (on the DevKit) |
+| 4 | Reed switch → GND (module: DO; VCC → 3V3) | 23 | Active buzzer + (− → GND) |
+| 21 / 22 | LCD I2C SDA / SCL (LCD VCC → VIN 5 V) | 25 | Optional: 10 kΩ → PAM8403 L input |
+
+8-key build: keys 5-8 on GPIO 34, 35, 36, 39, each with a 10 kΩ pull-up to 3V3; LEDs 5-8 on GPIO 5, 26, 15, 2. Flash `esp32dev_8keys`. If caregiver mode is on when the magnet is away, set `REED_ACTIVE_LOW = false` in `firmware/board/src/pins.h`. If the LCD is lit but blank, turn the contrast screw on its I2C backpack.
+
+## Serial commands (115200 baud, one line each)
+| Command | Reply |
+|---|---|
+| `ping` | `OK vaaniboard <fw> keys=<n> proto=1` |
+| `cfg` | `CFG {json}`: the current profile |
+| `info` | `INFO {json}`: capabilities and which voice clips are on the board |
+| `set {json}` | applies valid fields, e.g. `set {"lang":"ta","mode":"scan"}`; `WARN set <field>: …` for rejected ones; then `CFG` |
+| `press <n>` / `switch` | simulates key n / the access switch (logged as input `sim`) |
+| `kw <word> <0-1>` | a listening keyword result; two ≥ 0.8 in a row light the key for 10 s |
+| `clear` / `reset` / `help` | clear highlights / restore defaults / list commands |
+
+The board prints `HELLO …` at boot and `EVT,<ms>,<child>,<event>,<key>,<word>,<lang>,<input>` for every selection, highlight, palm press and caregiver change; `HL <keys>` for highlights, `CUR <key>` for the scan cursor, and `OK` / `WARN` / `ERR` replies. Lines over 255 characters and invalid commands are rejected and change nothing.
+
+## Before a demo on the board
+Run once on the built board with Studio connected (or `pio device monitor`):
+1. Power on: LEDs light in turn; LCD `VaaniBoard  HI` / `DIRECT   LISTEN`; `HELLO vaaniboard 0.2.0 … proto=1`.
+2. Each core key: LCD word, LED flash, 1 beep (Yes/No) or 3 beeps (Help/Stop); an `EVT … select …` line.
+3. Press Yes five times quickly: it speaks once. Three keys at once: nothing, `palm` logged.
+4. `set {"mode":"scan"}`: the cursor steps every 1.5 s; the access switch speaks the lit key.
+5. Magnet on the reed switch: `CAREGIVER MODE`; remove it: settings saved. Left on for 2 minutes: the keys come back by themselves.
+6. Unplug USB with the board on a power bank: keys keep working; plug back in: Studio reconnects.
+
 ## 22. License and contributing
-Software (firmware, Studio, tools, tests, CAD scripts): **MIT** ([`LICENSE`](LICENSE)). CAD hardware files: **CERN-OHL-P-2.0**. Documentation, vocabulary and sample data: **CC BY 4.0**. Details and third-party components: [`LICENSES/README.md`](LICENSES/README.md). Contributions: [`CONTRIBUTING.md`](CONTRIBUTING.md) and [`CODE_OF_CONDUCT.md`](CODE_OF_CONDUCT.md).
+Software (firmware, Studio, tools, tests, CAD scripts): **MIT** ([`LICENSE`](LICENSE)). CAD hardware files: **CERN-OHL-P-2.0**. Documentation, vocabulary and sample data: **CC BY 4.0**. Details and third-party components: [`LICENSES/README.md`](LICENSES/README.md). Contributions are welcome through pull requests.
 
 ## 23. Documentation
-[Implementation tracker](implementation.md) · [Implementation audit](docs/IMPLEMENTATION_AUDIT.md) · [Technical design](docs/TECHNICAL_DESIGN.md) · [Serial protocol](docs/SERIAL_PROTOCOL.md) · [Test plan](docs/TEST_PLAN.md) · [Threat model and privacy](docs/THREAT_MODEL_AND_PRIVACY.md) · [Build guide](docs/BUILD_GUIDE.md) · [Demo script](docs/DEMO.md) · [Release checklist](docs/RELEASE_CHECKLIST.md) · [CAD](cad/README.md)
+[Wiring](#wiring-4-key-build) · [Serial commands](#serial-commands-115200-baud-one-line-each) · [Before a demo](#before-a-demo-on-the-board) · [CAD](cad/README.md) · [Licences](LICENSES/README.md) · [Shared test vectors](tests/README.md)
 
 ## 24. Links
 - Repository: https://github.com/arshpreet-svg/vaaniboard (team) · mirror: https://github.com/payal-priyadarshini-sahoo-pps/vaaniboard
-- Demo video: not recorded yet. Storyboard in [`docs/DEMO.md`](docs/DEMO.md)
+- Demo video: not recorded yet.

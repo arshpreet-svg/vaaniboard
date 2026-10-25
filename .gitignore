@@ -34,10 +34,15 @@ vaaniboard-profiles-*.json
 *.sqlite
 *.db
 
-# Confidential until the provisional patent is filed (see docs/BUILD_GUIDE.md §10)
+# Confidential until the provisional patent is filed
 *Dossier*.pdf
 *Software_Spec*.pdf
 *Hardware_Spec*.pdf
+
+# Documentation other than README files is kept locally, not in the repository
+*.md
+!README.md
+!**/README.md
 
 # OS / editors
 .DS_Store

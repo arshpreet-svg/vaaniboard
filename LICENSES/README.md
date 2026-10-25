@@ -6,7 +6,7 @@ VaaniBoard mixes software, a hardware design and documentation, so each part has
 |---|---|---|---|
 | Software | `firmware/`, `studio/`, `tools/`, `tests/`, `cad/*.py` (CadQuery and Blender scripts) | MIT | [`../LICENSE`](../LICENSE) |
 | Hardware design | `cad/step/`, `cad/stl/`, `cad/dxf/`, `cad/render/parts.json` | CERN-OHL-P-2.0 (permissive) | [`CERN-OHL-P-2.0.txt`](CERN-OHL-P-2.0.txt) |
-| Documentation and drawings | `README.md`, `docs/`, `cad/README.md`, `cad/drawings/`, `implementation.md` | CC BY 4.0 | [`CC-BY-4.0.txt`](CC-BY-4.0.txt) |
+| Documentation and drawings | `README.md` files, `cad/drawings/` | CC BY 4.0 | [`CC-BY-4.0.txt`](CC-BY-4.0.txt) |
 | Vocabulary data | `language-packs/` | CC BY 4.0 | [`CC-BY-4.0.txt`](CC-BY-4.0.txt) |
 | Sample data | `sample-data/` | CC BY 4.0 (all fictional) | [`CC-BY-4.0.txt`](CC-BY-4.0.txt) |
 
